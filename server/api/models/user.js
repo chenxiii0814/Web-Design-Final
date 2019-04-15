@@ -27,7 +27,7 @@ let UserSchema = new Schema({
      */
     Phone_number: {
         type: String,
-        required: "phone number is required"
+        required: "Phone number is required"
     },
 
     /**
@@ -35,7 +35,7 @@ let UserSchema = new Schema({
      */
     Email_address: {
         type: String,
-        required: "email is required"
+        required: "Email is required"
     },
     
 }, {
