@@ -30,3 +30,4 @@ initApp(app);
 // Launch app to listen to specified port
 app.listen(port);
 console.log('Users RESTful API server started on: ' + port);
+
