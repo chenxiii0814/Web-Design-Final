@@ -13,6 +13,7 @@ const itemService = require('../services/item-service');
  * @param {response} {HTTP response object}
  */
 exports.list = function (request, response) {
+
     const resolve = (items) => {
         response.status(200);
         response.json(items);

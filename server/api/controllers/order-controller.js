@@ -31,6 +31,7 @@ exports.list = function (request, response) {
  */
 exports.post = function (request, response) {
     const newOrder = Object.assign({}, request.body);
+    console.log(newOrder);
     const resolve = (order) => {
         response.status(200);
         response.json(order);

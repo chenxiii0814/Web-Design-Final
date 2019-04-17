@@ -6,6 +6,11 @@
 module.exports = function (app) {
     const userController = require('../controllers/user-controller');
     // User Routes for search and create.
+    app.get('/',function(req,res){
+        res.send("hello users!!!")
+    })
+    
+
     app.route('/users')
         .get(userController.list)
         .post(userController.post);
