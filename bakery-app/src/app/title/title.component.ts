@@ -6,6 +6,7 @@ import {delay} from "rxjs/operators";
   selector: 'app-title',
   templateUrl: `./title.component.html`,
   styleUrls: [`./title.component.scss`],
+
   // animations:[trigger("slide_main",[
   //   //different style in different states
   //   state('shown',style({opacity: 1, height:'300px'})),
@@ -24,15 +25,20 @@ export class TitleComponent implements OnInit {
   //   {img:'main_pic4'},
   // ]
 
+
   constructor() { }
 
   ngOnInit() {
+
     // this.wait1s();
+
   }
 
   async wait1s() {
     await delay(1000);
+
     // this.isShown = !this.isShown;
+
   }
 
 }

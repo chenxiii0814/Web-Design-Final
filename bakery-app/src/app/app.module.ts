@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 
+
 import { RouterModule } from '@angular/router';//router
 import { MenuComponent } from './menu/menu.component';//menu part
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -20,10 +21,12 @@ import { MenuPDFComponent } from './menu-pdf/menu-pdf.component';
     NotFoundComponent,
     SlideComponent,
     MenuPDFComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {
@@ -43,6 +46,7 @@ import { MenuPDFComponent } from './menu-pdf/menu-pdf.component';
         component: NotFoundComponent
       }
     ])
+
   ],
   providers: [],
   bootstrap: [AppComponent]
