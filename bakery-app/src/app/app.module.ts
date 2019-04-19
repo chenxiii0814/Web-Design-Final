@@ -41,7 +41,7 @@ import { RegisterComponent } from './register/register.component';
     AboutComponent,
     CareerComponent,
     ShopComponent,
-    GiftitemsComponent
+    GiftitemsComponent,
 
     LoginComponent,
     RegisterComponent
