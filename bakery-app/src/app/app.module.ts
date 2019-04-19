@@ -19,6 +19,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { CareerComponent } from './career/career.component';
 import { ShopComponent } from './shop/shop.component';
+import { GiftitemsComponent } from './giftitems/giftitems.component';
 
 
 
@@ -36,7 +37,8 @@ import { ShopComponent } from './shop/shop.component';
     ContactComponent,
     AboutComponent,
     CareerComponent,
-    ShopComponent
+    ShopComponent,
+    GiftitemsComponent
 
   ],
   imports: [
@@ -79,6 +81,10 @@ import { ShopComponent } from './shop/shop.component';
       { 
         path:'contact',
         component: ContactComponent
+      },
+      { 
+        path:'shop/giftitems',
+        component: GiftitemsComponent
       },
       { 
         path:'shop',
