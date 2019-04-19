@@ -23,6 +23,7 @@ import { GiftitemsComponent } from './giftitems/giftitems.component';
 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SurpriseComponent } from './surprise/surprise.component';
 
 
 
@@ -44,7 +45,8 @@ import { RegisterComponent } from './register/register.component';
     GiftitemsComponent,
 
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SurpriseComponent
 
 
   ],
@@ -95,6 +97,10 @@ import { RegisterComponent } from './register/register.component';
       { 
         path:'contact',
         component: ContactComponent
+      },
+      { 
+        path:'shop/surprise',
+        component: SurpriseComponent
       },
       { 
         path:'shop/giftitems',
