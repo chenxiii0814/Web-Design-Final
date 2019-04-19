@@ -18,6 +18,9 @@ import { DetailLocationComponent } from './detail-location/detail-location.compo
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { CareerComponent } from './career/career.component';
+import { ShopComponent } from './shop/shop.component';
+import { GiftitemsComponent } from './giftitems/giftitems.component';
+
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
@@ -37,8 +40,12 @@ import { RegisterComponent } from './register/register.component';
     ContactComponent,
     AboutComponent,
     CareerComponent,
+    ShopComponent,
+    GiftitemsComponent
+
     LoginComponent,
     RegisterComponent
+
 
   ],
   imports: [
@@ -81,6 +88,14 @@ import { RegisterComponent } from './register/register.component';
       { 
         path:'contact',
         component: ContactComponent
+      },
+      { 
+        path:'shop/giftitems',
+        component: GiftitemsComponent
+      },
+      { 
+        path:'shop',
+        component: ShopComponent
       },
       {
         path:'**',
