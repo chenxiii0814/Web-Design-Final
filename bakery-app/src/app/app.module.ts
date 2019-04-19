@@ -25,6 +25,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SurpriseComponent } from './surprise/surprise.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { NewsComponent } from './news/news.component';
 
 
 
@@ -48,7 +49,8 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     LoginComponent,
     RegisterComponent,
     SurpriseComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    NewsComponent
 
 
   ],
@@ -116,6 +118,10 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
       { 
         path:'shop',
         component: ShopComponent
+      },
+      {
+        path:'news',
+        component: NewsComponent
       },
       {
         path:'**',

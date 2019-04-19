@@ -1,0 +1,47 @@
+
+@mixin news_pic($pic){
+  background-repeat: no-repeat;
+  padding:10px;
+  text-align: center;
+  margin: 20px;
+  height: 130px;
+  background-image: $pic;
+}
+.g-news{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 240px 240px 240px 240px;
+  //padding:10px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.g-news div{
+  border: solid 1px #121212;
+  border-radius: 2px;
+  margin: 5px;
+}
+
+
+.news1{
+  @include news_pic(url("news1.png"))
+}
+
+.news2{
+  @include news_pic(url("news2.png"))
+}
+
+.news3{
+  @include news_pic(url("news3.png"))
+}
+.news4{
+  @include news_pic(url("news4.png"))
+}
+
+
+.g-news p{
+padding-top: 5px;
+  font-size: smaller;
+  margin:3px ;
+  border-top: 1px solid #121212;
+}
