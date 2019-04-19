@@ -52,7 +52,14 @@ import { RegisterComponent } from './register/register.component';
         component: SlideComponent
       },
       {
-
+        path:'signin',
+        component: LoginComponent
+      },
+      {
+        path:'signup',
+        component: RegisterComponent
+      },
+      {
         path:'about',
         component: AboutComponent
       },
