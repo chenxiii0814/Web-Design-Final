@@ -1,0 +1,68 @@
+.welcome {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    text-decoration: none;
+    color:black;
+    text-align:left;
+  }
+  
+  .welcome p{
+    font-size:17px;
+    margin-left:220px;
+    margin-top: 80px;
+    line-height: 40px;
+    width:450px;
+    padding-bottom: 200px;
+    border-bottom: solid 1px #121212;
+  }
+
+  .address{
+    grid-column: 1 / 2;
+    grid-row: 1;
+    text-decoration: none;
+    color:black;
+    text-align:left
+  }
+
+  .address p{
+    font-size:12px;
+    margin-left:220px;
+    line-height:20px;
+  }
+
+  .time{
+    grid-column: 1 / 2;
+    grid-row: 1;
+    text-decoration: none;
+    color:black;
+    text-align:left
+  }
+
+  .time p{
+    font-size:12px;
+    margin-left:220px;
+    line-height:20px;
+  }
+
+  .contactInformation{
+    grid-column: 1 / 2;
+    grid-row: 1;
+    text-decoration: none;
+    color:black;
+    text-align:left
+  }
+
+  .contactInformation p{
+    font-size:12px;
+    margin-left:220px;
+    line-height:30px;
+    font-style: italic
+  }
+
+  #store_pic1{
+    background-image: url("bakery_large.jpg");
+    width: 380px;
+    height: 480px;
+    margin-top: 100px;
+    float:right
+}
