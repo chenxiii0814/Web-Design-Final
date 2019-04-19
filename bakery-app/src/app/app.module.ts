@@ -29,10 +29,8 @@ import { ContactComponent } from './contact/contact.component';
     MenuPDFComponent,
 
     LocationComponent,
-    DetailLocationComponent
-
+    DetailLocationComponent,
     ContactComponent
-
 
   ],
   imports: [
@@ -63,21 +61,15 @@ import { ContactComponent } from './contact/contact.component';
         path:'menus',
         component: MenuComponent
       },
-
-      {
-        path:'**',
-        component: NotFoundComponent
-      },
-
       { 
         path:'contact',
         component: ContactComponent
       },
+
       {
         path:'**',
         component: NotFoundComponent
-      }
-
+      },
     ])
 
   ],
