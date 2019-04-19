@@ -5,15 +5,47 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 
+
+import { RouterModule } from '@angular/router';//router
+import { MenuComponent } from './menu/menu.component';//menu part
+import { NotFoundComponent } from './not-found/not-found.component';
+import { SlideComponent } from './slide/slide.component';
+import { MenuPDFComponent } from './menu-pdf/menu-pdf.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    TitleComponent
+    TitleComponent,
+    MenuComponent,
+    NotFoundComponent,
+    SlideComponent,
+    MenuPDFComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+
+    BrowserAnimationsModule,
+    RouterModule.forRoot([
+      {
+        path:'',
+        component: SlideComponent
+      },
+      {
+        path:'menus/pdf',
+        component: MenuPDFComponent
+      },
+      {
+        path:'menus',
+        component: MenuComponent
+      },
+      {
+        path:'**',
+        component: NotFoundComponent
+      }
+    ])
 
   ],
   providers: [],
