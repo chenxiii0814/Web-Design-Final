@@ -26,6 +26,8 @@ import { RegisterComponent } from './register/register.component';
 import { SurpriseComponent } from './surprise/surprise.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
+import { HttpClientModule }    from '@angular/common/http';
+
 
 
 @NgModule({
@@ -55,7 +57,7 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../user';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  userList: [User];
+
+  constructor(private httpClient:HttpClient) { }
 
   ngOnInit() {
+    this.getProfile();
+  }
+
+  getProfile(){
+    // console.log(this.firstName); 
+    this.httpClient.get('http://localhost:3000/users/')
+    .subscribe(
+      (data:[User])=>{
+        this.userList = data;
+        for(let i=0;i<data.length;i++){
+          console.log(data[i].UserName + " " + data[i].Password);
+          // this.contactList.push(data[i]);
+          // console.log("contactlist: "+this.contactList[i]);
+        }        
+      }
+    );
   }
 
   signIn(){
