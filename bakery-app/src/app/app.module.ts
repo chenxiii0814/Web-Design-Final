@@ -18,6 +18,8 @@ import { DetailLocationComponent } from './detail-location/detail-location.compo
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { CareerComponent } from './career/career.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -34,7 +36,9 @@ import { CareerComponent } from './career/career.component';
     DetailLocationComponent,
     ContactComponent,
     AboutComponent,
-    CareerComponent
+    CareerComponent,
+    LoginComponent,
+    RegisterComponent
 
   ],
   imports: [
