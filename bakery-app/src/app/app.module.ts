@@ -25,6 +25,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SurpriseComponent } from './surprise/surprise.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { NewsComponent } from './news/news.component';
 
 import { HttpClientModule }    from '@angular/common/http';
 
@@ -50,7 +51,8 @@ import { HttpClientModule }    from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     SurpriseComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    NewsComponent
 
 
   ],
@@ -118,6 +120,10 @@ import { HttpClientModule }    from '@angular/common/http';
       { 
         path:'shop',
         component: ShopComponent
+      },
+      {
+        path:'news',
+        component: NewsComponent
       },
       {
         path:'**',
