@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';//menu part
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SlideComponent } from './slide/slide.component';
 import { MenuPDFComponent } from './menu-pdf/menu-pdf.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MenuPDFComponent } from './menu-pdf/menu-pdf.component';
     MenuComponent,
     NotFoundComponent,
     SlideComponent,
-    MenuPDFComponent
+    MenuPDFComponent,
+    ContactComponent
 
   ],
   imports: [
@@ -40,6 +42,10 @@ import { MenuPDFComponent } from './menu-pdf/menu-pdf.component';
       {
         path:'menus',
         component: MenuComponent
+      },
+      { 
+        path:'contact',
+        component: ContactComponent
       },
       {
         path:'**',
