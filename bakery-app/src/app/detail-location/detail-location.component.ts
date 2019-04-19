@@ -12,4 +12,8 @@ export class DetailLocationComponent implements OnInit {
   ngOnInit() {
   }
 
+  goBack(){
+    history.go(-1);
+  }
+
 }
