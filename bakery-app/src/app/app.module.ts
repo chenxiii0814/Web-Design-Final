@@ -17,6 +17,7 @@ import { DetailLocationComponent } from './detail-location/detail-location.compo
 
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { CareerComponent } from './career/career.component';
 
 
 
@@ -32,7 +33,8 @@ import { AboutComponent } from './about/about.component';
     LocationComponent,
     DetailLocationComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    CareerComponent
 
   ],
   imports: [
@@ -69,10 +71,13 @@ import { AboutComponent } from './about/about.component';
         component: MenuComponent
       },
       { 
+        path:'career',
+        component: CareerComponent
+      },
+      { 
         path:'contact',
         component: ContactComponent
       },
-
       {
         path:'**',
         component: NotFoundComponent
