@@ -1,5 +1,7 @@
 .title{
-  width:50%；  
+  width:50%;
+  font-size:18px; 
+  margin-left:300px
 }
 
 * {box-sizing: border-box;}
@@ -17,16 +19,32 @@
 }.wrapper {
   display: grid;
   grid-template-columns: 19% 19% 19% 19% 19%;
-  grid-gap: 10px;
+  grid-gap: 300px;
   grid-auto-rows: minmax(60px, auto);
 }
 .giftOfBakery {
   grid-column: 1 / 2;
   grid-row: 1;
   text-decoration: none;
-  color:black
+  color:black;
 }
 p{
   font-size:10px;
   font-style:italic
+}
+
+.giftOfBakery2 {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  text-decoration: none;
+  color:black
+}
+
+.bakerygift{
+  margin-left:180px;
+  width:200px;
+}
+
+.bakerygift2{
+  width:200px;
 }
