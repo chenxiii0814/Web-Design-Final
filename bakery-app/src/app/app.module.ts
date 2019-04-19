@@ -34,7 +34,7 @@ import { MenuPDFComponent } from './menu-pdf/menu-pdf.component';
         component: SlideComponent
       },
       {
-        path:'menus/pdf',
+        path:'menus/:id',
         component: MenuPDFComponent
       },
       {

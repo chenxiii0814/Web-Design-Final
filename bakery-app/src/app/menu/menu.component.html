@@ -9,12 +9,26 @@
 
 
 <div class="wrapper">
-    <div class="one">All Day Menu</div>
-    <div class="two">Brunch Menu</div>
-    <div class="three">Bread Menu</div>
-    <div class="four">Pastry&Dessert<br/> Menu</div>
-    <div class="five">Gluten Menu</div>
+    <div class="one">
+        <a class="without_underline" [routerLink]="['/menus', menus.id]">All Day Menu</a>
+    </div>
+    <div class="two">
+        <a class="without_underline" [routerLink]="['/menus', menus.id]">Brunch Menu</a>
+    </div>
+    <div class="three">
+        <a class="without_underline" [routerLink]="['/menus', menus.id]">Bread Menu</a>
+    </div>
+    <div class="four">
+        <a class="without_underline" [routerLink]="['/menus', menus.id]">Pastry&Dessert<br/> Menu</a>
+    </div>
+    <div class="five">
+        <a class="without_underline" [routerLink]="['/menus', menus.id]">Gluten Menu</a>
+    </div>
     <!-- <div class="six">Six</div> -->
-    <div class="seven">Passover Menu</div>
-    <div class="eight"><a class="without_underline" routerLink="/menus/pdf">Easter Menu</a></div>
+    <div class="seven">
+        <a class="without_underline" [routerLink]="['/menus', menus.id]">Passover Menu</a>
+    </div>
+    <div class="eight">
+        <a class="without_underline" [routerLink]="['/menus', menus.id]">Easter Menu</a>
+    </div>
 </div>
