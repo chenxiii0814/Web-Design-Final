@@ -24,6 +24,7 @@ import { GiftitemsComponent } from './giftitems/giftitems.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SurpriseComponent } from './surprise/surprise.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 
 
@@ -46,7 +47,8 @@ import { SurpriseComponent } from './surprise/surprise.component';
 
     LoginComponent,
     RegisterComponent,
-    SurpriseComponent
+    SurpriseComponent,
+    ComingSoonComponent
 
 
   ],
@@ -76,6 +78,11 @@ import { SurpriseComponent } from './surprise/surprise.component';
 
         path:'location/detail',
         component: DetailLocationComponent
+      },
+      {
+
+        path:'location/comingSoon',
+        component: ComingSoonComponent
       },
       {
         path:'location',
