@@ -7,11 +7,26 @@ p{
     margin-left: 40%;
     font-size: 150%;
     font-weight: 150;
+    margin-top: 40px;
 }
 
 .input_box{
     margin-left: 40%;
     text-align: left;
+    margin-top: 50px;
+}
+
+.sign_up{
+    margin-left: 40%;
+    text-align: left;
+    margin-top: 50px;
+    text-decoration: none;
+    // color: black;
+    font-size: 90%;
+}
+
+a{
+    color: black;
 }
 
 .element{
@@ -19,4 +34,12 @@ p{
     margin-bottom: 20px;
 }
 
+.button_format{
+    border:solid 0.5px grey;
+    // border-radius: 3px;
+}
+
+a:hover{
+    color: rgba(220,220,220,0.8);
+}
 
