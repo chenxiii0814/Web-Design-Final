@@ -16,6 +16,7 @@ import { LocationComponent } from './location/location.component';
 import { DetailLocationComponent } from './detail-location/detail-location.component';
 
 import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -30,7 +31,8 @@ import { ContactComponent } from './contact/contact.component';
 
     LocationComponent,
     DetailLocationComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent
 
   ],
   imports: [
@@ -42,6 +44,11 @@ import { ContactComponent } from './contact/contact.component';
       {
         path:'',
         component: SlideComponent
+      },
+      {
+
+        path:'about',
+        component: AboutComponent
       },
       {
 
