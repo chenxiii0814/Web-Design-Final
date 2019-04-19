@@ -1,10 +1,29 @@
+#main_pic{
+  position: absolute;
+  left: 17%;
+  top: 250px;
+  background-image: url("img1.png");
+  z-index: 1;
+  width: 960px;
+  height: 600px;
 
-  
-  #main_pic{
-    background-image: url("main_pic1.jpg");
-    width: 300px;
-    height: 400px;
-    margin-top: 30px;
-    margin-left: 15%;
-  }
-  
+
+}
+#main_pic_2{
+  background-image: url("img2.png");
+  z-index: 0;
+  width: 960px;
+  height: 600px;
+  position: absolute;
+  left: 17%;
+  top: 250px;
+}
+#main_pic_3{
+  position: absolute;
+  left: 17%;
+  top: 250px;
+  background-image: url("img3.jpg");
+  z-index: 3;
+  width: 960px;
+  height: 600px;
+}
