@@ -21,6 +21,9 @@ import { CareerComponent } from './career/career.component';
 import { ShopComponent } from './shop/shop.component';
 import { GiftitemsComponent } from './giftitems/giftitems.component';
 
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
 
 
 @NgModule({
@@ -39,6 +42,10 @@ import { GiftitemsComponent } from './giftitems/giftitems.component';
     CareerComponent,
     ShopComponent,
     GiftitemsComponent
+
+    LoginComponent,
+    RegisterComponent
+
 
   ],
   imports: [

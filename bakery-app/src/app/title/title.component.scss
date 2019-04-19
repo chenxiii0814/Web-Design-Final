@@ -4,7 +4,7 @@ body{
 }
 .header a{
   text-align: center;
-  font-size: 88px;
+  font-size: 80px;
   color: black;
   letter-spacing: 7px;
   border-bottom: solid 1px #EEEDED;
@@ -22,13 +22,12 @@ a:hover{
   text-decoration: none;
 }
 .header p{
-  margin-top: -20px;
+  margin-top: -10px;
   margin-bottom: 20px;
   font-size: 11px;
   letter-spacing: 7px;
 
 }
-
 
 .banner{
   font-size: smaller;
@@ -40,8 +39,6 @@ a:hover{
     bottom: solid 1px #121212;
   };
 }
-
-
 
 label:last-child{
   margin-right: 0;
