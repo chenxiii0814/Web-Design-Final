@@ -11,8 +11,12 @@ import { MenuComponent } from './menu/menu.component';//menu part
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SlideComponent } from './slide/slide.component';
 import { MenuPDFComponent } from './menu-pdf/menu-pdf.component';
+
 import { LocationComponent } from './location/location.component';
 import { DetailLocationComponent } from './detail-location/detail-location.component';
+
+import { ContactComponent } from './contact/contact.component';
+
 
 
 @NgModule({
@@ -23,8 +27,12 @@ import { DetailLocationComponent } from './detail-location/detail-location.compo
     NotFoundComponent,
     SlideComponent,
     MenuPDFComponent,
+
     LocationComponent,
     DetailLocationComponent
+
+    ContactComponent
+
 
   ],
   imports: [
@@ -38,6 +46,7 @@ import { DetailLocationComponent } from './detail-location/detail-location.compo
         component: SlideComponent
       },
       {
+
         path:'location/detail',
         component: DetailLocationComponent
       },
@@ -46,6 +55,7 @@ import { DetailLocationComponent } from './detail-location/detail-location.compo
         component: LocationComponent
       },
       {
+
         path:'menus/:id',
         component: MenuPDFComponent
       },
@@ -53,10 +63,21 @@ import { DetailLocationComponent } from './detail-location/detail-location.compo
         path:'menus',
         component: MenuComponent
       },
+
       {
         path:'**',
         component: NotFoundComponent
       },
+
+      { 
+        path:'contact',
+        component: ContactComponent
+      },
+      {
+        path:'**',
+        component: NotFoundComponent
+      }
+
     ])
 
   ],
