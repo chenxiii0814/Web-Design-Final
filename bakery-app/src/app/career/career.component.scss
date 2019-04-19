@@ -10,7 +10,7 @@
     width:55%;
     // background-color: bisque;
     margin-left: 2%;
-    margin-top:50px;
+    margin-top:20px;
 }
 
 .right{
@@ -18,24 +18,30 @@
     width:38%;
     // background-color: bisque;
     margin-right: 2%;
-    margin-top:50px;
+    margin-top:20px;
 }
 
 .pic{
     background-image: url("Career.jpg");
-    width: 300px;
-    height: 500px;
+    width:420px;
+    height: 600px;
 }
 
 .format{
     margin-top: 10px;
+    margin-bottom: 18px;
 }
 
 .title{
-    font-size: 120%;
+    font-size: 16px;
     font-weight:bold;
 }
 
 .text{
-    font-size: 100%;
+    font-size: 15px;
+}
+
+li{
+    margin-bottom:5px;
+    list-style-type: circle
 }
