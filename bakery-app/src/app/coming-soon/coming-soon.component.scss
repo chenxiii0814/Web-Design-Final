@@ -1,0 +1,35 @@
+.back{
+    cursor: pointer;
+    margin-top:20px;
+    float:left;
+    margin-left:220px;
+    font-style:italic;
+    font-size:20px;
+  }
+
+ .comingSoon{
+    grid-column: 1 / 2;
+    grid-row: 1;
+    text-decoration: none;
+    color:black;
+    text-align:left;
+ }
+ 
+ p{
+    font-size:18px;
+    margin-left:220px;
+    margin-top: 80px;
+    margin-right:0px;
+    line-height: 40px;
+    width:450px;
+  }
+  
+  #store_pic2{
+    background-image: url("store_pic2.jpg");
+    width: 400px;
+    height: 600px;
+    float:right;
+    margin-top:-150px;
+    margin-right:220px;
+}
+
