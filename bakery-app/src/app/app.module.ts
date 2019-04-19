@@ -11,7 +11,12 @@ import { MenuComponent } from './menu/menu.component';//menu part
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SlideComponent } from './slide/slide.component';
 import { MenuPDFComponent } from './menu-pdf/menu-pdf.component';
+
+import { LocationComponent } from './location/location.component';
+import { DetailLocationComponent } from './detail-location/detail-location.component';
+
 import { ContactComponent } from './contact/contact.component';
+
 
 
 @NgModule({
@@ -22,7 +27,12 @@ import { ContactComponent } from './contact/contact.component';
     NotFoundComponent,
     SlideComponent,
     MenuPDFComponent,
+
+    LocationComponent,
+    DetailLocationComponent
+
     ContactComponent
+
 
   ],
   imports: [
@@ -36,6 +46,16 @@ import { ContactComponent } from './contact/contact.component';
         component: SlideComponent
       },
       {
+
+        path:'location/detail',
+        component: DetailLocationComponent
+      },
+      {
+        path:'location',
+        component: LocationComponent
+      },
+      {
+
         path:'menus/:id',
         component: MenuPDFComponent
       },
@@ -43,6 +63,12 @@ import { ContactComponent } from './contact/contact.component';
         path:'menus',
         component: MenuComponent
       },
+
+      {
+        path:'**',
+        component: NotFoundComponent
+      },
+
       { 
         path:'contact',
         component: ContactComponent
@@ -51,6 +77,7 @@ import { ContactComponent } from './contact/contact.component';
         path:'**',
         component: NotFoundComponent
       }
+
     ])
 
   ],
