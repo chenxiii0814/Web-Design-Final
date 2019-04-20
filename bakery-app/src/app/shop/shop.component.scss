@@ -22,14 +22,17 @@
   grid-gap: 300px;
   grid-auto-rows: minmax(60px, auto);
 }
+
 .giftOfBakery {
   grid-column: 1 / 2;
   grid-row: 1;
   text-decoration: none;
   color:black;
 }
+
 p{
-  font-size:10px;
+  margin-top:20px;
+  font-size:13px;
   font-style:italic
 }
 
@@ -41,10 +44,14 @@ p{
 }
 
 .bakerygift{
-  margin-left:180px;
-  width:200px;
+  margin-left:100px;
+  margin-top:30px;
+  width:300px;
+  height:100px;
 }
 
 .bakerygift2{
-  width:200px;
+  width:300px;
+  height:100px;
+  margin-top:30px;
 }
