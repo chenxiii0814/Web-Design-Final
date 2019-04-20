@@ -28,6 +28,7 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { NewsComponent } from './news/news.component';
 
 import { HttpClientModule }    from '@angular/common/http';
+import { OrdersComponent } from './orders/orders.component';
 
 
 
@@ -52,7 +53,8 @@ import { HttpClientModule }    from '@angular/common/http';
     RegisterComponent,
     SurpriseComponent,
     ComingSoonComponent,
-    NewsComponent
+    NewsComponent,
+    OrdersComponent
 
 
   ],
@@ -124,6 +126,10 @@ import { HttpClientModule }    from '@angular/common/http';
       {
         path:'news',
         component: NewsComponent
+      },
+      {
+        path:'orders',
+        component: OrdersComponent
       },
       {
         path:'**',
