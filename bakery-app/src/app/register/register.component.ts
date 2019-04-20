@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
+import { HttpClient } from '@angular/common/http';
+import { LoginComponent } from './../login/login.component';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
+  providers:[LoginComponent]
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient, private comp:LoginComponent) { }
 
   ngOnInit() {
+    // this.comp.getProfile();
   }
 
   signUp(){
@@ -40,10 +45,30 @@ export class RegisterComponent implements OnInit {
       return false;
     }
 
-    //connect database here!
-
+    //connect database
+    this.postProfile();
 
     console.log("username: "+username+"\npassword: "+password+"\nphone: "+phone+"\nemail: "+email);
   }
 
+  postProfile(){
+    let username = (<HTMLInputElement>document.getElementById("username")).value;
+    let password = (<HTMLInputElement>document.getElementById("password")).value;
+    let phone = (<HTMLInputElement>document.getElementById("phone")).value;
+    let email = (<HTMLInputElement>document.getElementById("email")).value;
+
+    this.httpClient.post('http://localhost:3000/users/',
+      {
+        'UserName': username,
+        'Password': password,
+        'Phone_number': phone,
+        'Email_address': email
+      })
+      .subscribe(
+        (data: any) => {
+          console.log(data);
+          
+        }
+      );
+  }
 }

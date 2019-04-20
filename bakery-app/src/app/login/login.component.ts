@@ -9,7 +9,9 @@ import { User } from '../user';
 })
 export class LoginComponent implements OnInit {
 
+  //  userList:User[]=[];
   userList: [User];
+  testList:User[]=[];
 
   constructor(private httpClient:HttpClient) { }
 
@@ -25,11 +27,15 @@ export class LoginComponent implements OnInit {
         this.userList = data;
         for(let i=0;i<data.length;i++){
           console.log(data[i].UserName + " " + data[i].Password);
-          // this.contactList.push(data[i]);
-          // console.log("contactlist: "+this.contactList[i]);
+          // this.testList.push(data[i]);
+          // console.log("testlist: "+this.testList[i]);
+          console.log("userlist: "+this.userList[i].UserName);
         }        
       }
     );
+    
+    //console.log("data:"+this.getProfile.data[])
+    // return this.userList;
   }
 
   signIn(){
