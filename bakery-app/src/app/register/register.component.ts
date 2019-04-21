@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { LoginComponent } from './../login/login.component';
+import {ActivatedRoute, Route, Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ import { LoginComponent } from './../login/login.component';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient, private comp:LoginComponent) { }
+  constructor(private httpClient: HttpClient, private comp:LoginComponent, private router:Router) { }
 
   ngOnInit() {
     // this.comp.getProfile();
@@ -39,6 +40,7 @@ export class RegisterComponent implements OnInit {
     }
     if (errorInfo == "") {
       alert("Hi "+username+"! Enjoy your cake!");
+
     }
     else {
       alert(errorInfo);
