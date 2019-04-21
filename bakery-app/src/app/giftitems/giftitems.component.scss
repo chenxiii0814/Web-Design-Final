@@ -1,19 +1,40 @@
 #card1{
     background-image: url("card1.jpg");
-    width: 575px;
-    height: 375px;
+    width: 450px;
+    height: 300px;
     margin-top:50px;
-    margin-left:200px;
-    float:left
+  margin-right: 15%;
+  float: right;
 }
 #card2{
     background-image: url("card2.jpg");
     width: 450px;
     height: 300px;
-    margin-top:50px;
-    margin-left:20px;
-    float:right;
+    margin-top:60px;
+  margin-left: 15%;
     margin-right:150px
+}
+
+.back{
+  cursor: pointer;
+  margin-top:20px;
+  float:left;
+  margin-left:220px;
+  font-style:italic;
+  font-size:20px;
+}
+a:link{
+  color: black;
+  text-decoration: none;
+}
+
+a:visited{
+  color: #000;
+  text-decoration: none;
+}
+a:hover{
+  color: #121212;
+  text-decoration: none;
 }
 // #card1_details{
 //     margin-left:350px;
