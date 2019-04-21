@@ -13,13 +13,14 @@
     text-decoration: none;
     color:black;
     text-align:left;
+  z-index: 5;
   }
   
   .welcome p{
     font-size:15px;
     margin-left:220px;
     margin-top: 80px;
-    margin-right:0px;
+    margin-right:0;
     line-height: 40px;
     width:450px;
     padding-bottom:150px;
@@ -71,9 +72,29 @@
 
   #store_pic1{
     background-image: url("bakery_large.png");
-    width: 380px;
+    position: absolute;
+    right: 90px;
+    width: 300px;
     height: 480px;
     margin-top:100px;
-    float:right;
+
     margin-right:150px;
+}
+#store_pic2{
+  background-image: url("location.png");
+  position: absolute;
+  right: 90px;
+  width: 300px;
+  height: 480px;
+  margin-top:100px;
+  margin-right:150px;
+}
+#store_pic3{
+  background-image: url("location2.png");
+  position: absolute;
+  right: 90px;
+  width: 300px;
+  height: 480px;
+  margin-top:100px;
+  margin-right:150px;
 }
