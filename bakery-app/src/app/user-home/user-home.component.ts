@@ -3,13 +3,8 @@ import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-user-home',
-  template: `
-    <p>
-      userhome working!
-      {{username}}
-    </p>
-  `,
-  styles: []
+  templateUrl: `./user-home.component.html`,
+  styleUrls: [`./user-home.component.scss`]
 })
 export class UserHomeComponent implements OnInit {
   username:String;
