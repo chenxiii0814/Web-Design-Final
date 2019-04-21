@@ -1,7 +1,7 @@
 
 <!-- {{itemList}} -->
 <div class="list">
-  <label>All Day Menu</label>
+  <label>ALL DAY MENU</label>
 <ul class="itemlist">
   <li *ngFor="let item of itemList"
     [class.selected]="item === selectedItem"
@@ -10,8 +10,8 @@
   </li>
 </ul>
 
-<div *ngIf="selectedItem">
-  <h2>{{selectedItem.ItemName | uppercase}} Details</h2>
+<div *ngIf="selectedItem" class = "itemDetail">
+  <h2>{{selectedItem.ItemName | uppercase}} DETAILS</h2>
   <div><span>ItemName: </span>{{selectedItem.ItemName}}</div>
   <div><span>Price: </span>{{selectedItem.Price}}</div>
   <div><span>Ingredient: </span>{{selectedItem.Ingredient}}</div>

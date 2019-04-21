@@ -30,6 +30,7 @@ import { NewsComponent } from './news/news.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { OrdersComponent } from './orders/orders.component';
 import { UserHomeComponent } from './user-home/user-home.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
@@ -56,7 +57,8 @@ import { UserHomeComponent } from './user-home/user-home.component';
     ComingSoonComponent,
     NewsComponent,
     OrdersComponent,
-    UserHomeComponent
+    UserHomeComponent,
+    CheckoutComponent
 
 
   ],
