@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     
     let username = (<HTMLInputElement>document.getElementById("username")).value;
     let password = (<HTMLInputElement>document.getElementById("password")).value;
-
+    let logged:String;
     let match: boolean = false;
     
     let errorInfo = "";
@@ -54,6 +54,7 @@ export class LoginComponent implements OnInit {
           console.log(errorInfo)
           if (errorInfo == "") {
             alert("Hi " + username + "! Enjoy your cake!");
+
           }
           else {
             alert(errorInfo);
