@@ -1,29 +1,30 @@
-#main_pic{
+@mixin slide_pic($pic,$index){
   position: absolute;
   left: 17%;
   top: 250px;
-  background-image: url("main_pic1.jpg");
-  z-index: 1;
   width: 900px;
   height: 600px;
+  background-image: $pic;
+  z-index: $index;
+
+}
 
 
+
+
+#main_pic{
+@include slide_pic(url("img5.png"),1);
 }
 #main_pic_2{
-  background-image: url("main_pic1.jpg");
-  z-index: 0;
-  width: 900px;
-  height: 600px;
-  position: absolute;
-  left: 17%;
-  top: 250px;
+  @include slide_pic(url("img2.png"),0);
 }
 #main_pic_3{
-  position: absolute;
-  left: 17%;
-  top: 250px;
-  background-image: url("main_pic1.jpg");
-  z-index: 3;
-  width: 900px;
-  height: 600px;
+  @include slide_pic(url("img3.jpg"),2);
 }
+#main_pic_4{
+  @include slide_pic(url("img4.png"),3);
+}
+#main_pic_5{
+  @include slide_pic(url("img6.png"),4);
+}
+
