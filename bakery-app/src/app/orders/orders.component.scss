@@ -1,13 +1,14 @@
 .list{
   position: absolute;
   left: 10%;
-  margin-top: 50px;
+  margin-top: 20px;
 
 }
 .list label{
   margin-top: 20px;
   text-align: left;
   font-size: larger;
+  margin-left:10px;
 
 }
 
@@ -15,15 +16,17 @@
     background-color: #CFD8DC !important;
     color: white;
   }
+
   .itemlist {
     //margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
     width: 15em;
-    margin-left:120px;
+    margin-left:100px;
     background-color: #EEEDED;
     border-radius: 2px;
   }
+
   .itemlist li {
     cursor: pointer;
     position: relative;
@@ -34,6 +37,7 @@
     height: 1.6em;
 
   }
+
   .itemlist li.selected:hover {
     background-color: #EEEDED !important;
     color: white;
@@ -61,4 +65,16 @@
     height: 1.8em;
     margin-right: .8em;
     border-radius: 2px 0 0 2px;
+  }
+
+  h2{
+    font-size:15px
+  }
+
+  .itemDetail{
+    font-size:15px;
+    line-height:20px;
+    text-align: left;
+    margin-left: 110px
+
   }
