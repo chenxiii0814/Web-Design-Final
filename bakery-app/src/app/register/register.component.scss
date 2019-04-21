@@ -1,29 +1,32 @@
 p{
     text-align: left;
     // margin-left: 30%;
+    font-size:25px;
 }
 
 .text{
-    margin-left: 40%;
+    margin-left: 42%;
     font-size: 150%;
     font-weight: 150;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .input_box{
-    margin-top: 50px;
-    margin-left: 40%;
+    margin-top: 45px;
+    margin-left: 36%;
     text-align: left;
 }
 
 .element{
     margin-top: 20px;
     margin-bottom: 20px;
+    line-height:30px
 }
 
 .title_name{
-    width:103px;
+    width:150px;
     float: left;
+    font-size:18px
     // background-color: aquamarine;
 }
 
@@ -32,9 +35,22 @@ p{
     float: left;
 }
 
-.button_format{
+.buttonFormat{
     border:solid 0.5px grey;
-    // border-radius: 3px;
+    border-radius: 5px;
+    width:100px;
+    height:30px;
+    margin-top:30px;
+    margin-left:120px;
+    font-size:15px;
+    color:black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
+input{
+    border:solid 0.5px grey;
+    width:200px;
+    height:20px;
+    margin-left:10px
+}
 
