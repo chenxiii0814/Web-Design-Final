@@ -6,7 +6,8 @@ import {delay} from "rxjs/operators";
   selector: 'app-slide',
   templateUrl: './slide.component.html',
   styleUrls: ['./slide.component.scss'],
-  animations:[trigger("slide_main",[
+  animations:[
+    trigger("slide_main",[
     //different style in different states
     state('shown',style({opacity: 1, height:'600px'})),
     state('hidden',style({opacity:0, height:'600px'})),
@@ -20,8 +21,22 @@ import {delay} from "rxjs/operators";
       // transition: control when and how to transact
       transition('shown=>hidden',animate('6s 3s')),
       transition('hidden=>shown',animate('3s 6s'))
+    ]),
+    trigger("slide_main3",[
+      state('shown',style({opacity: 1, height:'600px'})),
+      state('hidden',style({opacity:0, height:'600px'})),
+      // transition: control when and how to transact
+      transition('shown=>hidden',animate('3s 9s')),
+      transition('hidden=>shown',animate('3s 9s'))
     ])
-
+    ,
+    trigger("slide_main4",[
+      state('shown',style({opacity: 1, height:'600px'})),
+      state('hidden',style({opacity:0, height:'600px'})),
+      // transition: control when and how to transact
+      transition('shown=>hidden',animate('3s 12s')),
+      transition('hidden=>shown',animate('3s 12s'))
+    ])
   ]
 })
 export class SlideComponent implements OnInit {
@@ -29,6 +44,9 @@ export class SlideComponent implements OnInit {
   isShown1 = true;
   isShown2 = false;
   isShown3 = false;
+  isShown4 = false;
+  isShown5 = false;
+
   
   constructor() { }
 
@@ -40,5 +58,7 @@ export class SlideComponent implements OnInit {
     this.isShown1 = !this.isShown1;
     this.isShown2 = !this.isShown2;
     this.isShown3 = !this.isShown3;
+    this.isShown4 = !this.isShown4;
+    this.isShown5 = !this.isShown5;
   }
 }
