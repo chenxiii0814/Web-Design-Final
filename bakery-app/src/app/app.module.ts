@@ -29,6 +29,7 @@ import { NewsComponent } from './news/news.component';
 
 import { HttpClientModule }    from '@angular/common/http';
 import { OrdersComponent } from './orders/orders.component';
+import { UserHomeComponent } from './user-home/user-home.component';
 
 
 
@@ -54,7 +55,8 @@ import { OrdersComponent } from './orders/orders.component';
     SurpriseComponent,
     ComingSoonComponent,
     NewsComponent,
-    OrdersComponent
+    OrdersComponent,
+    UserHomeComponent
 
 
   ],
@@ -130,6 +132,10 @@ import { OrdersComponent } from './orders/orders.component';
       {
         path:'orders',
         component: OrdersComponent
+      },
+      {
+        path:'userhome',
+        component: UserHomeComponent
       },
       {
         path:'**',
