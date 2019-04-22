@@ -92,14 +92,20 @@ display:inline-block;
  }
 
  .idOfOrder{
-   margin-left:10px;
+   margin-left:-80px;
    margin-top:20px;
    @include display-order
  }
 
- .orderItem{
+ .userOfOrder{
+   margin-left:10px;
    margin-top:80px;
-   margin-left:-70px;
+   @include display-order
+ }
+
+ .orderItem{
+   margin-top:140px;
+   margin-left:-80px;
    @include display-order
  }
  
