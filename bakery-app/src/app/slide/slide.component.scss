@@ -1,16 +1,13 @@
 @mixin slide_pic($pic,$index){
   position: absolute;
   left: 17%;
-  top: 250px;
+  top: 215px;
   width: 900px;
   height: 600px;
   background-image: $pic;
   z-index: $index;
 
 }
-
-
-
 
 #main_pic{
 @include slide_pic(url("img5.png"),1);
