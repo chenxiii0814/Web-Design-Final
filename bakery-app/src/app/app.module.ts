@@ -73,6 +73,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
         component: SlideComponent
       },
       {
+        path:'checkOut',
+        component: CheckoutComponent
+      },
+      {
         path:'signin',
         component: LoginComponent
       },

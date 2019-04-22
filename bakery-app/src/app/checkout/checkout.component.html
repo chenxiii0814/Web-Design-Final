@@ -1,3 +1,40 @@
-<p>
-  checkout works!
-</p>
+<h1>
+  CHECKOUT
+</h1>
+
+<div class = "checkOut">
+  <form action = "/">
+<div class = "contactInformation">CONTACT INFORMATION</div>
+    <div class="title_name">FIRST NAME:
+    <input id="firstName" type="text" name="firstName"></div>
+    <div class="title_name">LAST NAME:
+    <input id="lastName" type="text" name="lastName"></div><br>
+    <div class="title_name">EMAIL:
+    <input id="email" type="email" name="email"></div>
+    <div class="title_name">PHONE NUMBER:
+    <input id="phoneNumber" type="text" name="phoneNumber"></div>
+
+<div class = "payment">PAYMENT</div>
+    <div class="title_name">CARD NUMBER:
+    <input id="cardNumber" type="number" name="cardNumber"></div>
+    <div class="title_name">EXPIRE DATE:
+    <input id="expiration" type="month" name="expiration"></div><br>
+    <div class="title_name">CVV:
+    <input id="cvv" type="number" name="cvv"></div>
+    <div class="title_name">ZIP:
+    <input id="zipCode" type="number" name="zipCode"></div><br>
+    <div class="title_name_tip">ADD TIP:
+    <input id="tip" type="number" name="tip"></div>
+
+<div class = "promotion"> PROMO CODE</div>
+  <div class = "title_name_promo">PROMO CODE:
+  <input id="promoCode" type="text" name="promoCode"></div>
+
+
+<div class = "placeOrder">
+  <div class = "agreement">By placing an order you agree to our Terms of Service and Privacy Policy</div>
+  <button id = "checkOutButton" (click) = "checkOut()">PLACE ORDER</button>
+</div>
+
+</form>
+</div>

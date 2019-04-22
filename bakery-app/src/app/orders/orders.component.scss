@@ -1,19 +1,19 @@
 .list{
   position: absolute;
-  left: 10%;
+  left: 130px;
   margin-top: 20px;
 
 }
 .list label{
   margin-top: 20px;
   text-align: left;
-  font-size: larger;
+  font-size: 18px;
   margin-left:10px;
 
 }
 
 .selected {
-    background-color: #CFD8DC !important;
+    background-color: rgb(201, 160, 160) !important;
     color: white;
   }
 
@@ -23,7 +23,7 @@
     padding: 0;
     width: 15em;
     margin-left:100px;
-    background-color: #EEEDED;
+    background-color:rgb(243,241,241);
     border-radius: 2px;
   }
 
@@ -34,19 +34,19 @@
     left: 0;
     margin: .5em;
     padding: .3em 0;
-    height: 1.6em;
-
+    height: 28px;
+    
   }
 
   .itemlist li.selected:hover {
-    background-color: #EEEDED !important;
+    background-color: rgb(201, 160, 160)!important;
     color: white;
-    padding: 10px;
+    padding: 5px;
   }
   .itemlist li:hover {
-    color: #541111;
-    border-bottom:2px #000 solid;
-    left: .1em;
+    color: #b97f7f;
+    // border-bottom:2px #000 solid;
+    // left: .1em;
   }
   .itemlist .text {
     position: relative;
@@ -75,6 +75,5 @@
     font-size:15px;
     line-height:20px;
     text-align: left;
-    margin-left: 110px
-
+    margin-left: 100px
   }
