@@ -1,29 +1,30 @@
 <div class="g-news">
-  <div>
-    <dt (click)="onclick1()" class="news1"></dt>
-    <p id="news_1">
-      OVER THE COURSE OF JUST A DECADE, MAX HOMEMADE BAKERY & CAFÉ HAS GROWN FROM A HOME KITCHEN OPERATION INTO A FAVORITE PURVEYOR OF PÂTISSERIE IN BOSTON
+  <div class="gridelem" *ngFor="let p of ps">
+    <dt id={{p}}></dt>
+    <p id="{{p}}sub" >
+      {{quotes[p]}}
     </p>
-    <p>BAKE FROM SCRATCH</p>
+    <button (click)="onclick1(p)">BAKE FROM SCRATCH</button>
   </div>
-  <div><dt (click)="onclick2()" class="news2"></dt>
-    <p id="news_2">
-      OVER THE COURSE OF JUST A DECADE, MAX HOMEMADE BAKERY & CAFÉ HAS GROWN FROM A HOME KITCHEN OPERATION INTO A FAVORITE PURVEYOR OF PÂTISSERIE IN BOSTON
-    </p>
-    <p>THE THIRTY-ONE PERCENT</p>
-  </div>
-    <div>
-      <dt class="news3"></dt>
-      <p id="news_3">
-        OVER THE COURSE OF JUST A DECADE, MAX HOMEMADE BAKERY & CAFÉ HAS GROWN FROM A HOME KITCHEN OPERATION INTO A FAVORITE PURVEYOR OF PÂTISSERIE IN BOSTON
-      </p>
-      <p>THE BOSTON GLOBAL</p>
-    </div>
-      <div>
-        <dt class="news4"></dt>
-        <p id="news_4">
-          OVER THE COURSE OF JUST A DECADE, MAX HOMEMADE BAKERY & CAFÉ HAS GROWN FROM A HOME KITCHEN OPERATION INTO A FAVORITE PURVEYOR OF PÂTISSERIE IN BOSTON
-        </p>
-        <p>WIILIAMS-SONOMA TASTE</p>
-      </div>
+
+  <!--<div><dt (click)="onclick2()" class="news2"></dt>-->
+    <!--<p id="news_2">-->
+      <!--OVER THE COURSE OF JUST A DECADE, MAX HOMEMADE BAKERY & CAFÉ HAS GROWN FROM A HOME KITCHEN OPERATION INTO A FAVORITE PURVEYOR OF PÂTISSERIE IN BOSTON-->
+    <!--</p>-->
+    <!--<p>THE THIRTY-ONE PERCENT</p>-->
+  <!--</div>-->
+    <!--<div>-->
+      <!--<dt class="news3"></dt>-->
+      <!--<p id="news_3">-->
+        <!--OVER THE COURSE OF JUST A DECADE, MAX HOMEMADE BAKERY & CAFÉ HAS GROWN FROM A HOME KITCHEN OPERATION INTO A FAVORITE PURVEYOR OF PÂTISSERIE IN BOSTON-->
+      <!--</p>-->
+      <!--<p>THE BOSTON GLOBAL</p>-->
+    <!--</div>-->
+      <!--<div>-->
+        <!--<dt class="news4"></dt>-->
+        <!--<p id="news_4">-->
+          <!--OVER THE COURSE OF JUST A DECADE, MAX HOMEMADE BAKERY & CAFÉ HAS GROWN FROM A HOME KITCHEN OPERATION INTO A FAVORITE PURVEYOR OF PÂTISSERIE IN BOSTON-->
+        <!--</p>-->
+        <!--<p>WIILIAMS-SONOMA TASTE</p>-->
+      <!--</div>-->
 </div>

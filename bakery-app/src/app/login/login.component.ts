@@ -56,7 +56,6 @@ export class LoginComponent implements OnInit {
               document.getElementById("loggedUser").innerHTML=this.loggedUser.UserName.toString();
             }
 
-
           }
           console.log("out for2: " + match);
 
