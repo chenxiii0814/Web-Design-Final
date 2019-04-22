@@ -14,6 +14,11 @@
     margin-bottom: 15px;
 }
 
+@mixin display-order{
+   font-size: 14px;
+   float:left;
+}
+
 h1{
 float:left;
 margin-left:200px;
@@ -68,9 +73,32 @@ display:inline-block;
     border-radius: 5px;
     width:150px;
     height:30px;
-    // margin-top:30px;
+    margin-top:5px;
     margin-left:120px;
     font-size:15px;
     color:black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
  }
+
+ .orderDetail{
+    float:right;
+    margin-right:-480px;
+    margin-top:-500px;
+    border:1px solid black;
+    height:500px;
+    width:350px;
+    font-size: 18px;
+ }
+
+ .idOfOrder{
+   margin-left:10px;
+   margin-top:20px;
+   @include display-order
+ }
+
+ .orderItem{
+   margin-top:80px;
+   margin-left:-70px;
+   @include display-order
+ }
+ 
