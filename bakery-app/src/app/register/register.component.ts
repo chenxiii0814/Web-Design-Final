@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { LoginComponent } from './../login/login.component';
-import {ActivatedRoute, Route, Router} from "@angular/router";
+import { ActivatedRoute, Route, Router} from "@angular/router";
+import {User} from "../user";
 
 @Component({
   selector: 'app-register',
@@ -11,6 +12,7 @@ import {ActivatedRoute, Route, Router} from "@angular/router";
   providers:[LoginComponent]
 })
 export class RegisterComponent implements OnInit {
+  registeredUser: User;
 
   constructor(private httpClient: HttpClient, private comp:LoginComponent, private router:Router) { }
 
@@ -18,7 +20,7 @@ export class RegisterComponent implements OnInit {
     // this.comp.getProfile();
   }
 
-  signUp(){
+  signUp() {
     let username = (<HTMLInputElement>document.getElementById("username")).value;
     let password = (<HTMLInputElement>document.getElementById("password")).value;
     let phone = (<HTMLInputElement>document.getElementById("phone")).value;
@@ -39,19 +41,22 @@ export class RegisterComponent implements OnInit {
       errorInfo = "Email cannot be null!\n";
     }
     if (errorInfo == "") {
-      alert("Hi "+username+"! Enjoy your cake!");
+      //connect database
+      this.postProfile();
+      console.log(this.registeredUser);
+      // console.log("username: " + username + "\npassword: " + password + "\nphone: " + phone + "\nemail: " + email);
+      this.router.navigateByUrl("");
+      document.getElementById("loginController").style.display = 'none';
+      document.getElementById("loggedUser").innerHTML = username;
+      // alert("Hi "+username+"! Enjoy your cake!");
 
-    }
-    else {
+    } else {
       alert(errorInfo);
       return false;
     }
 
-    //connect database
-    this.postProfile();
-
-    console.log("username: "+username+"\npassword: "+password+"\nphone: "+phone+"\nemail: "+email);
   }
+
 
   postProfile(){
     let username = (<HTMLInputElement>document.getElementById("username")).value;
@@ -69,7 +74,7 @@ export class RegisterComponent implements OnInit {
       .subscribe(
         (data: any) => {
           console.log(data);
-          
+          this.registeredUser = data;
         }
       );
   }
