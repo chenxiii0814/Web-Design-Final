@@ -2,9 +2,24 @@
 <label class="left">ALL DAY MENU</label>
 <div class="list">  
   <ul class="itemlist">
-    <li *ngFor="let item of itemList" [class.selected]="item === selectedItem" (click)="onSelect(item)">
+    <!-- <li *ngFor="let item of itemList" [class.selected]="item === selectedItem" (click)="onSelect(item)">
       <span class="badge red"><button (click)="addItem(item)">add</button></span> {{item.ItemName}}
-    </li>
+    </li> -->
+    <li *ngFor="let item of itemList">
+    <div  class="thumbnail">
+      <img src="https://1.bp.blogspot.com/-93v_s-iwmEE/U1OM0vymMOI/AAAAAAAB6PU/LiPMNit3CDQ/s1600/jennifer+(23).jpg" alt="">
+       <div class="caption">
+         <h3>{{item.ItemName}}</h3>
+         <p>
+           <strong>Price: </strong>${{item.Price}}
+         </p>
+         <p>
+           <button class="btn btn-primary" (click)="addItem(item)">Add to Cart</button>
+           <button class="btn btn-default" (click)="onSelect(item)">View Details</button>
+         </p>
+       </div>
+    </div>
+  </li>
   </ul>
 
   <div class="orderlist ">

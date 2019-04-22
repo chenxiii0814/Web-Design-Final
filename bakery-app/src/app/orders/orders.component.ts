@@ -45,7 +45,7 @@ export class OrdersComponent implements OnInit {
 
 
 
-  // public testlist=['item1', 'item2', 'item3'];
+  public testlist=['item1', 'item2', 'item3'];
   // public recentItems = "None";
   // public cart = [];
   // addItem(test) {
