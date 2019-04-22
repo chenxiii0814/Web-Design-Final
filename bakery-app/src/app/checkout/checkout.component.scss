@@ -1,0 +1,76 @@
+@mixin display-payment-div{
+    margin-top:5px;
+    text-align: left;
+    margin-left:145px;
+    margin-bottom: 5px
+}
+
+@mixin display-title-input{
+    text-align: left;
+    margin-left:145px;
+    margin-top:5px;
+    width:200px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+h1{
+float:left;
+margin-left:200px;
+font-size:20px;
+color:black
+}
+
+.checkOut{
+float:left;
+margin-left:-260px;
+margin-top:40px;
+}
+
+.title_name{
+display:inline-block;
+@include display-title-input
+}
+
+.contactInformation{
+   @include display-payment-div
+}
+
+.payment{
+    @include display-payment-div
+ }
+
+ .promotion{
+    @include display-payment-div
+ }
+
+ input{
+     width:200px;
+     height:20px;
+     border:0px;
+     border-bottom: solid 1px black;
+ }
+
+ .title_name_tip{
+    @include display-title-input
+ }
+
+ .title_name_promo{
+    @include display-title-input
+ }
+
+ .agreement{
+    @include display-payment-div
+ }
+
+ #checkOutButton{
+    border:solid 0.5px grey;
+    border-radius: 5px;
+    width:150px;
+    height:30px;
+    // margin-top:30px;
+    margin-left:120px;
+    font-size:15px;
+    color:black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+ }
