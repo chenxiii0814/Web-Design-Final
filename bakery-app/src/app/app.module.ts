@@ -26,7 +26,7 @@ import { RegisterComponent } from './register/register.component';
 import { SurpriseComponent } from './surprise/surprise.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { NewsComponent } from './news/news.component';
-
+import { NgxWebstorageModule} from "ngx-webstorage";
 import { HttpClientModule }    from '@angular/common/http';
 import { OrdersComponent } from './orders/orders.component';
 import { UserHomeComponent } from './user-home/user-home.component';
@@ -148,7 +148,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
         path:'**',
         component: NotFoundComponent
       },
-    ])
+    ]),
+    NgxWebstorageModule.forRoot(),
 
   ],
   providers: [],

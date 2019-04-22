@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Order} from './../order-model/order';
+import {SessionStorageService} from "ngx-webstorage";
 
 @Component({
   selector: 'app-checkout',
@@ -14,12 +15,13 @@ export class CheckoutComponent implements OnInit {
   private orderID;
   private user;
   private item;
-
+          attribute;
   private order = new Order(this.orderID, this.user, this.item)
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private sessionSt:SessionStorageService) { }
 
   ngOnInit() {
+    this.retrieve();
   }
 
   checkOut(){
@@ -45,6 +47,13 @@ export class CheckoutComponent implements OnInit {
         console.log("The POST observable is now completed.")
       }
     )
+  }
+
+  retrieve(){
+    var str=sessionStorage.obj;
+
+    this.attribute =JSON.parse(str);
+    console.log(this.attribute);
   }
 
   // getOrderID(){

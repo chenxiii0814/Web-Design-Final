@@ -4,7 +4,8 @@
     <li *ngFor="let item of itemList"
       [class.selected]="item === selectedItem"
       (click)="onSelect(item)">
-      <span class="badge"></span> {{item.ItemName}} 
+      <span class="badge"></span> {{item.ItemName}}
+
     </li>
   </ul>
   
@@ -13,9 +14,13 @@
     <div><span>ItemName: </span>{{selectedItem.ItemName}}</div>
     <div><span>Price: </span>{{selectedItem.Price}}</div>
     <div><span>Ingredient: </span>{{selectedItem.Ingredient}}</div>
-    
+    <button (click)="saveInLocal(selectedItem.ItemName,selectedItem.Price)">add to cart></button>
   </div>
   </div>
+
+
+<!--<button (click)="saveInLocal(key,1)">set the session</button>-->
+
     <!-- <li *ngFor="let item of itemList" [class.selected]="item === selectedItem" (click)="onSelect(item)">
       <span class="badge red"><button (click)="addItem(item)">add</button></span> {{item.ItemName}}
     </li> -->
