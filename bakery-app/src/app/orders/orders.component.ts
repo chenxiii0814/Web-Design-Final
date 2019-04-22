@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Item } from "../item";
+import {SessionStorageService} from "ngx-webstorage";
 
 @Component({
   selector: 'app-orders',
@@ -11,14 +12,32 @@ export class OrdersComponent implements OnInit {
   itemList: Item[] = [];
   selectedItem: Item;
   addedItem:Item;
+  // public data:any[];
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private sessionSt:SessionStorageService) { }
+
+  saveInLocal(name,price):void{
+    let itemKey = name;
+    this.sessionSt.store(name,price);
+    console.log("the name is:"+name+'its price:'+price);
+    for (let i=0;i<this.itemList.length;i++) {
+      if(this.itemList[i].ItemName==itemKey){
+        this.addedItem=this.itemList[i];
+        var str = JSON.stringify(this.addedItem);
+        sessionStorage.obj=str;
+        console.log(str);
+
+      }
+    }
+
+
+    }
+
 
   GetProfile() {
     this.httpClient.get('http://localhost:3000/items')
       .subscribe(
         (data: [Item]) => {
-
           for (let i = 0; i < data.length; i++) {
             this.itemList.push(data[i]);
           }
@@ -36,14 +55,12 @@ export class OrdersComponent implements OnInit {
 
   public recentItems = "None";
   public cart = [];
+
   addItem(item) {
     this.recentItems=item;
     this.cart.push(item);
     alert(item + "was added!");
   }
-
-
-
 
   public testlist=['item1', 'item2', 'item3'];
   // public recentItems = "None";
