@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Order} from './../order-model/order';
 import {SessionStorageService} from "ngx-webstorage";
@@ -51,9 +51,11 @@ export class CheckoutComponent implements OnInit {
 
   retrieve(){
     var str=sessionStorage.obj;
-
     this.attribute =JSON.parse(str);
     console.log(this.attribute);
+    let itemDetail = 
+    // let showItem = document.getElementById('items');
+    
   }
 
   // getOrderID(){
