@@ -11,18 +11,22 @@
     <input id="lastName" type="text" name="lastName"></div><br>
     <div class="title_name">EMAIL:
     <input id="email" type="email" name="email"></div>
-    <div class="title_name">PHONE NUMBER:
-    <input id="phoneNumber" type="text" name="phoneNumber"></div>
+    <div class="title_name" >PHONE NUMBER:
+    <input id="phoneNumber" type="text" name="phoneNumber" onkeyup="this.value=this.value.replace(/\D/g,'')" 
+    onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="10"></div>
 
 <div class = "payment">PAYMENT</div>
     <div class="title_name">CARD NUMBER:
-    <input id="cardNumber" type="number" name="cardNumber"></div>
+    <input id="cardNumber" type="text" name="cardNumber" onkeyup="this.value=this.value.replace(/\D/g,'')" 
+    onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="16"></div>
     <div class="title_name">EXPIRE DATE:
     <input id="expiration" type="month" name="expiration"></div><br>
     <div class="title_name">CVV:
-    <input id="cvv" type="number" name="cvv"></div>
+    <input id="cvv" type="text" name="cvv" onkeyup="this.value=this.value.replace(/\D/g,'')" 
+    onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="4"></div>
     <div class="title_name">ZIP:
-    <input id="zipCode" type="number" name="zipCode"></div><br>
+    <input id="zipCode" type="numbertext" name="zipCode" onkeyup="this.value=this.value.replace(/\D/g,'')" 
+    onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="5"></div><br>
     <div class="title_name_tip">ADD TIP:
     <input id="tip" type="number" name="tip"></div>
 
