@@ -1,20 +1,39 @@
 
-<!-- {{itemList}} -->
-<div class="list">
-  <label>ALL DAY MENU</label>
-<ul class="itemlist">
-  <li *ngFor="let item of itemList"
-    [class.selected]="item === selectedItem"
-    (click)="onSelect(item)">
-    <span class="badge"></span> {{item.ItemName}} 
-  </li>
-</ul>
+<label class="left">ALL DAY MENU</label>
+<div class="list">  
+  <ul class="itemlist">
+    <li *ngFor="let item of itemList" [class.selected]="item === selectedItem" (click)="onSelect(item)">
+      <span class="badge red"><button (click)="addItem(item)">add</button></span> {{item.ItemName}}
+    </li>
+  </ul>
 
-<div *ngIf="selectedItem" class = "itemDetail">
-  <h2>{{selectedItem.ItemName | uppercase}} DETAILS</h2>
-  <div><span>ItemName: </span>{{selectedItem.ItemName}}</div>
-  <div><span>Price: </span>{{selectedItem.Price}}</div>
-  <div><span>Ingredient: </span>{{selectedItem.Ingredient}}</div>
-  
+  <div class="orderlist ">
+    add items:{{recentItems}}<br />
+    Cart:
+    <ul>
+      <li *ngFor="let addeditem of cart">{{addeditem}}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="selectedItem" class="itemDetail">
+    <h2>{{selectedItem.ItemName | uppercase}} DETAILS</h2>
+    <div><span>ItemName: </span>{{selectedItem.ItemName}}</div>
+    <div><span>Price: </span>{{selectedItem.Price}}</div>
+    <div><span>Ingredient: </span>{{selectedItem.Ingredient}}</div>
+
+  </div>
+
+
 </div>
+
+<!-- <div class="row">
+  <div class="column-md-2">
+    <app-filter></app-filter>
+  </div>
+  <div class="column-md-8">
+    <app-product-list></app-product-list>
+  </div>
 </div>
+<div class="column-md-2">
+  <app-cart></app-cart>
+</div> -->
