@@ -19,7 +19,7 @@ export class CheckoutComponent implements OnInit {
           attribute;
           userlist;
 
-  private order = new Order(this.orderID, this.user, this.item)
+  private order = new Order(this.orderID, this.user, this.item);
 
   constructor(private http:HttpClient,private sessionSt:SessionStorageService, private router:Router){}
 
