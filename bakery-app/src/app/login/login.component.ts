@@ -12,8 +12,10 @@ export class LoginComponent implements OnInit {
 
   //  userList:User[]=[];
   userList: [User];
-  testList: User[] = [];
+  testList: any;
   loggedUser:User;
+  public user;
+
 
   constructor(private httpClient: HttpClient, private router:Router) { }
 
@@ -50,22 +52,28 @@ export class LoginComponent implements OnInit {
             if (!match) {
               errorInfo = "Your username or password does not match, please try again!"
               console.log("match before message is false......")
-            }else{
+            } else {
               this.router.navigateByUrl("");
-              document.getElementById("loginController").style.display='none';
-              document.getElementById("loggedUser").innerHTML=this.loggedUser.UserName.toString();
+              document.getElementById("loginController").style.display = 'none';
+              document.getElementById("loggedUser").innerHTML = this.loggedUser.UserName.toString();
+              this.httpClient.get("http://localhost:3000/users").subscribe((response) => {
+                this.testList = response;
+                for (let i = 0; i < this.testList.length; i++) {
+                  if (this.testList[i].UserName == username) {
+                       console.log(this.testList[i]);
+                       var str = JSON.stringify(this.testList[i]);
+
+                  }
+                }
+                sessionStorage.user=str;
+                console.log(str);
+              });
+
+
             }
-
+            console.log("out for2: " + match);
           }
-          console.log("out for2: " + match);
 
-          // if (errorInfo == "") {
-          //   alert("Hi " + username + "! Enjoy your cake!");
-          // }
-          // else {
-          //   alert(errorInfo);
-          //   return false;
-          // }
         }
       );
     console.log("out for3: " + match);

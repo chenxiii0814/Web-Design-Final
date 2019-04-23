@@ -13,6 +13,7 @@ import {User} from "../user";
 })
 export class RegisterComponent implements OnInit {
   registeredUser: User;
+  userlist;
 
   constructor(private httpClient: HttpClient, private comp:LoginComponent, private router:Router) { }
 
@@ -48,6 +49,19 @@ export class RegisterComponent implements OnInit {
       this.router.navigateByUrl("");
       document.getElementById("loginController").style.display = 'none';
       document.getElementById("loggedUser").innerHTML = username;
+      this.httpClient.get("http://localhost:3000/users").subscribe((response)=>{
+          this.userlist=response;
+        for (let i = 0; i < this.userlist.length; i++) {
+          if (this.userlist[i].UserName == username) {
+            console.log(this.userlist[i]);
+            var str = JSON.stringify(this.userlist[i]);
+
+          }
+        }
+        sessionStorage.user=str;
+      });
+
+
       // alert("Hi "+username+"! Enjoy your cake!");
 
     } else {
