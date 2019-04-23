@@ -54,9 +54,9 @@ export class CheckoutComponent implements OnInit {
     var str=sessionStorage.obj;
     this.attribute =JSON.parse(str);
     console.log(this.attribute["ItemName"]);
-    document.getElementById("items").innerHTML=this.attribute["ItemName"];
-    let usernameeeeee= sessionStorage.user;
-    this.user=JSON.parse(usernameeeeee);
+    document.getElementById("items").innerHTML=this.attribute["ItemName"] + "&nbsp"+"&nbsp"+"&nbsp" +"&nbsp" +"&nbsp" + this.attribute["Price"];
+    let nameOfUser= sessionStorage.user;
+    this.user=JSON.parse(nameOfUser);
     document.getElementById("orderUser").innerHTML=this.user["UserName"];
 
 
