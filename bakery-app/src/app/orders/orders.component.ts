@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Item } from "../item";
-import {SessionStorageService} from "ngx-webstorage";
+import { Image } from "../image";
+import { SessionStorageService } from "ngx-webstorage";
 
 @Component({
   selector: 'app-orders',
@@ -9,30 +10,39 @@ import {SessionStorageService} from "ngx-webstorage";
   styleUrls: ['./orders.component.scss']
 })
 export class OrdersComponent implements OnInit {
+  public imageList = ['COOKIE', 
+                      'MILK',
+                      'SHAKASHUKA',
+                      'SANDWICH',
+                      'TART',
+                      'YOGURT',
+                      'CHEESECAKE',
+                      'PIE',
+                      'SALAD',
+                      'TIRAMISU',
+                      'MACARONS',
+                      'BURGER',
+                      'CUPCAKE'];
   itemList: Item[] = [];
   selectedItem: Item;
-  addedItem:Item;
+  addedItem: Item;
   // public data:any[];
 
-  constructor(private httpClient: HttpClient, private sessionSt:SessionStorageService) { }
+  constructor(private httpClient: HttpClient, private sessionSt: SessionStorageService) { }
 
-  saveInLocal(name,price):void{
+  saveInLocal(name, price): void {
     let itemKey = name;
-    this.sessionSt.store(name,price);
-    console.log("the name is:"+name+'its price:'+price);
-    for (let i=0;i<this.itemList.length;i++) {
-      if(this.itemList[i].ItemName==itemKey){
-        this.addedItem=this.itemList[i];
+    this.sessionSt.store(name, price);
+    console.log("the name is:" + name + 'its price:' + price);
+    for (let i = 0; i < this.itemList.length; i++) {
+      if (this.itemList[i].ItemName == itemKey) {
+        this.addedItem = this.itemList[i];
         var str = JSON.stringify(this.addedItem);
-        sessionStorage.obj=str;
+        sessionStorage.obj = str;
         console.log(str);
-
       }
     }
-
-
-    }
-
+  }
 
   GetProfile() {
     this.httpClient.get('http://localhost:3000/items')
@@ -43,11 +53,12 @@ export class OrdersComponent implements OnInit {
           }
           console.log(this.itemList[0].ItemName);
         }
-      );console.log(this.itemList);
+      ); console.log(this.itemList);
   }
 
   ngOnInit() {
     this.GetProfile();
+    console.log(this.imageList[1]);
   }
   onSelect(item: Item): void {
     this.selectedItem = item;
@@ -57,12 +68,12 @@ export class OrdersComponent implements OnInit {
   public cart = [];
 
   addItem(item) {
-    this.recentItems=item;
+    this.recentItems = item;
     this.cart.push(item);
     alert(item + "was added!");
   }
 
-  public testlist=['item1', 'item2', 'item3'];
+  public testlist = ['item1', 'item2', 'item3'];
   // public recentItems = "None";
   // public cart = [];
   // addItem(test) {

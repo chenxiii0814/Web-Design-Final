@@ -1,6 +1,6 @@
 .list{
   position: absolute;
-  left: 130px;
+  left: 200px;
   margin-top: 20px;
 
 }
@@ -75,7 +75,7 @@
     font-size:15px;
     line-height:20px;
     text-align: left;
-    margin-left: 100px
+    margin-left: 20px
   }
 
   .itemDetail button{
@@ -90,14 +90,115 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: whitesmoke
   }
-  // .orderlist{
-  //   position: absolute;
-  //   right: 130px;
-  //   margin-top: 20px;
-  //   width:250px;
-  //   text-align: left;
-  //   font-size: 18px;
-  //   // background-color:rgb(243,241,241);
-  //   padding: 5px;
-    
-  // }
+ 
+  .pic_detail{
+    margin-right: 200px;
+    margin-top: 80px;
+    float: right;
+    width: 500px;
+    height: 800px;
+  }
+
+  .COOKIE{
+    background-image: url("oatmeal.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .MILK{
+    background-image: url("milk.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .CUPCAKE{
+    background-image: url("cupcake.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .SHAKASHUKA{
+    background-image: url("shakashuka.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .SANDWICH{
+    background-image: url("sandwich.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .BURGER{
+    background-image: url("burger.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .TART{
+    background-image: url("tart.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .YOGURT{
+    background-image: url("yogurt.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .CHEESECAKE{
+    background-image: url("cheesecake.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .PIE{
+    background-image: url("pie.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .MACARONS{
+    background-image: url("macarom.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .SALAD{
+    background-image: url("salad.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+  .TIRAMISU{
+    background-image: url("tiramisu.png");
+    width: 300px;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
