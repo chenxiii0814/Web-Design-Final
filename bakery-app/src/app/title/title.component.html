@@ -7,12 +7,14 @@
     <a routerLink="/signin">SIGN IN</a> /
     <a routerLink="/signup">SIGN UP</a>
   </div>
-  <div class="login" id="loggedUser" (click)=logout()></div>
-  <div id="logged"></div>
+  <div class="login" id="loggedUser" (click)="viewOrder()">
+  </div>
+  <div id="logged"></div><br>
 
   <div class="checkOut" id="checkOutController">
     <a routerLink="/checkOut">CHECKOUT</a>
   </div>
+  <button type="button" class="logOut" (click)= "logout()">LOGOUT</button>
 
   <nav class="banner">
     <a routerLink="/about"><label>ABOUT</label></a>

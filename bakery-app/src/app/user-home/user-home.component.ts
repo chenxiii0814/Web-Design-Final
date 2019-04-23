@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-user-home',
@@ -8,12 +9,19 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class UserHomeComponent implements OnInit {
   username:String;
+  private orderList;
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute, private http:HttpClient) { }
 
   ngOnInit() {
     this.route.params.subscribe((params)=>this.username=params.username);
+    this.getOrder()
+  }
 
+  getOrder(){
+    this.http.get('http://localhost:3000/orders').subscribe((response)=>{
+      this.orderList = response;
+    })
   }
 
 }

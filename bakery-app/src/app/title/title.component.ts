@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from "@angular/animations";
 import { delay } from "rxjs/operators";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-title',
@@ -26,7 +27,7 @@ export class TitleComponent implements OnInit {
   // ]
 
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
 
@@ -46,6 +47,10 @@ export class TitleComponent implements OnInit {
     document.getElementById("loggedUser").style.display='none';
     document.getElementById("loginController").style.display = 'block';
     alert("logout");
+  }
+
+  viewOrder(){
+    this.router.navigateByUrl('userhome')
   }
 
 }
