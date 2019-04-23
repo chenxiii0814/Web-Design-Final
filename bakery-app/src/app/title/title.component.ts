@@ -41,6 +41,7 @@ export class TitleComponent implements OnInit {
 
   }
 
+//set the logout style
   logout() {    
     document.getElementById("loggedUser").style.display='none';
     document.getElementById("loginController").style.display = 'block';

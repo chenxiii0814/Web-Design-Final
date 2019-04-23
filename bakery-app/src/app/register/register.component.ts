@@ -58,9 +58,9 @@ export class RegisterComponent implements OnInit {
 
           }
         }
+        //set the user to session
         sessionStorage.user=str;
       });
-
 
       // alert("Hi "+username+"! Enjoy your cake!");
 
@@ -73,6 +73,7 @@ export class RegisterComponent implements OnInit {
 
 
   postProfile(){
+    //send the new user's information to database by set
     let username = (<HTMLInputElement>document.getElementById("username")).value;
     let password = (<HTMLInputElement>document.getElementById("password")).value;
     let phone = (<HTMLInputElement>document.getElementById("phone")).value;

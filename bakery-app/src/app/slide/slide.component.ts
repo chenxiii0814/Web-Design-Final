@@ -40,7 +40,7 @@ import {delay} from "rxjs/operators";
   ]
 })
 export class SlideComponent implements OnInit {
-
+//set trigger variety for animation
   isShown1 = true;
   isShown2 = false;
   isShown3 = false;
@@ -53,6 +53,8 @@ export class SlideComponent implements OnInit {
   ngOnInit() {
     this.wait1s();
   }
+
+  //set when the animation start and the state transform
   async wait1s() {
     await delay(1000);
     this.isShown1 = !this.isShown1;

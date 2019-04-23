@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     // this.getProfile();
   }
 
-
+//get the user information and send it to database
   signIn() {
     
     let username = (<HTMLInputElement>document.getElementById("username")).value;
@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
             }
 
             console.log("out for: " + match);
+            //validation for illegal insert
             if (!match) {
               errorInfo = "Your username or password does not match, please try again!"
               console.log("match before message is false......")
@@ -65,6 +66,7 @@ export class LoginComponent implements OnInit {
 
                   }
                 }
+                //store the login user to session
                 sessionStorage.user=str;
                 console.log(str);
               });
