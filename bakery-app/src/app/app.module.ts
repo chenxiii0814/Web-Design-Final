@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';//router
 import { MenuComponent } from './menu/menu.component';//menu part
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SlideComponent } from './slide/slide.component';
-import { MenuPDFComponent } from './menu-pdf/menu-pdf.component';
+
 
 import { LocationComponent } from './location/location.component';
 import { DetailLocationComponent } from './detail-location/detail-location.component';
@@ -31,7 +31,7 @@ import { HttpClientModule }    from '@angular/common/http';
 import { OrdersComponent } from './orders/orders.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { AllDayComponent } from './all-day/all-day.component';
+
 
 
 
@@ -42,7 +42,7 @@ import { AllDayComponent } from './all-day/all-day.component';
     MenuComponent,
     NotFoundComponent,
     SlideComponent,
-    MenuPDFComponent,
+
 
     LocationComponent,
     DetailLocationComponent,
@@ -60,7 +60,7 @@ import { AllDayComponent } from './all-day/all-day.component';
     OrdersComponent,
     UserHomeComponent,
     CheckoutComponent,
-    AllDayComponent
+    
 
 
   ],
@@ -104,14 +104,8 @@ import { AllDayComponent } from './all-day/all-day.component';
         path:'location',
         component: LocationComponent
       },
-      {
-        path:'menus/allday',
-        component: AllDayComponent
-      },
-      {
-        path:'menus/:id',
-        component: MenuPDFComponent
-      },
+      
+      
       {
         path:'menus',
         component: MenuComponent
