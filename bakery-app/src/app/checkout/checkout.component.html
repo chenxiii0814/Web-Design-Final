@@ -35,21 +35,22 @@
       <input id="promoCode" type="text" name="promoCode"></div>
 
 
-    <div class="placeOrder">
-      <div class="agreement">By placing an order you agree to our Terms of Service and Privacy Policy</div>
-      <button id="checkOutButton" (click)="checkOut()">PLACE ORDER</button>
-    </div>
-  </form>
 
-  <div class="orderDetail">YOUR ORDER<br>
-    <label id="UserOrder" class="UserOrder">CLIENT:</label>
-    <div id="orderUser" class="userOfOrder"></div>
-    <div id="orderID" class="idOfOrder">ORDER ID:</div>
-    <div class="itemInOrder">
-      <div id="itemOfOrder" class="orderItem">ITEMS:
-        <div id="items" class="itemList"></div>
-        <div (click)="checkOrder()" class="checkOrder">CHECKOUT</div>
-      </div>
-    </div>
+<div class = "placeOrder">
+  <div class = "agreement">By placing an order you agree to our Terms of Service and Privacy Policy</div>
+  <button id = "checkOutButton" type="button" (click) = "checkOut()">PLACE ORDER</button>
+</div>
+</form>
+
+<div class = "orderDetail">YOUR ORDER<br>
+  <label id = "UserOrder" class = "UserOrder">CLIENT:</label>
+  <div id = "orderUser" class = "userOfOrder"></div>
+  <div id = "orderID" class = "idOfOrder">ORDER ID:</div>
+  <label id="IdNum" class="IdNum"></label>
+  <div class = "itemInOrder">
+  <div id="itemOfOrder" class ="orderItem">ITEMS:
+    <div id="items" class = "itemList"></div>
+    <div (click)="checkOrder()" class="checkOrder">CHECKOUT</div>
+
   </div>
 </div>
