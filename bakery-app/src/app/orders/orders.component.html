@@ -1,3 +1,4 @@
+<!--Display all items from database-->
 <div class="list">
   <label>MENU</label>
   <ul class="itemlist">
@@ -7,6 +8,7 @@
   </ul>
 </div>
 
+<!--Display the details when clicking the specific item-->
 <div class="pic_detail">
   <div class={{selectedItem.ItemName}}></div>
   <div *ngIf="selectedItem" class="itemDetail">
@@ -17,6 +19,8 @@
     <button (click)="saveInLocal(selectedItem.ItemName,selectedItem.Price,selectedItem.ItemName)">ADD TO CART ></button>
   </div>
 </div>
+
+<!--Get the added items from database and display these items -->
 <div class="cart">
   <div class="cart_title">Cart:</div>
   <ul>
@@ -24,55 +28,4 @@
   </ul>
 </div>
 
-<!--<button (click)="saveInLocal(key,1)">set the session</button>-->
 
-<!-- <li *ngFor="let item of itemList" [class.selected]="item === selectedItem" (click)="onSelect(item)">
-      <span class="badge red"><button (click)="addItem(item)">add</button></span> {{item.ItemName}}
-    </li> -->
-<!-- <li *ngFor="let item of itemList">
-    <div  class="thumbnail"> -->
-<!-- <img src="https://1.bp.blogspot.com/-93v_s-iwmEE/U1OM0vymMOI/AAAAAAAB6PU/LiPMNit3CDQ/s1600/jennifer+(23).jpg" alt=""> -->
-<!-- <div class="caption">
-         <h3>{{item.ItemName}}</h3> -->
-<!-- <p>
-           <strong>Price: </strong>${{item.Price}}
-         </p> -->
-<!-- <p>
-           <button class="btn btn-primary" (click)="addItem(item)">Add to Cart</button>
-           <button class="btn btn-default" (click)="onSelect(item)">View Details</button>
-         </p> -->
-<!-- </div>
-    </div>
-  </li>
-  </ul> -->
-
-<!-- <div class="orderlist ">
-    add items:{{recentItems}}<br />
-    Cart:
-    <ul>
-      <li *ngFor="let addeditem of cart">{{addeditem}}</li>
-    </ul>
-  </div> -->
-
-<!-- <div *ngIf="selectedItem" class="itemDetail">
-    <h2>{{selectedItem.ItemName | uppercase}} DETAILS</h2>
-    <div><span>ItemName: </span>{{selectedItem.ItemName}}</div>
-    <div><span>Price: </span>{{selectedItem.Price}}</div>
-    <div><span>Ingredient: </span>{{selectedItem.Ingredient}}</div>
-
-  </div>
-
-
-</div> -->
-
-<!-- <div class="row">
-  <div class="column-md-2">
-    <app-filter></app-filter>
-  </div>
-  <div class="column-md-8">
-    <app-product-list></app-product-list>
-  </div>
-</div>
-<div class="column-md-2">
-  <app-cart></app-cart>
-</div> -->
