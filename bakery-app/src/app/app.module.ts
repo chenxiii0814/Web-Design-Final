@@ -31,6 +31,7 @@ import { HttpClientModule }    from '@angular/common/http';
 import { OrdersComponent } from './orders/orders.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { AllDayComponent } from './all-day/all-day.component';
 
 
 
@@ -58,7 +59,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     NewsComponent,
     OrdersComponent,
     UserHomeComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    AllDayComponent
 
 
   ],
@@ -103,7 +105,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
         component: LocationComponent
       },
       {
-
+        path:'menus/allday',
+        component: AllDayComponent
+      },
+      {
         path:'menus/:id',
         component: MenuPDFComponent
       },
