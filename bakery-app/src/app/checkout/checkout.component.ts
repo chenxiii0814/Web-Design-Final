@@ -26,10 +26,18 @@ export class CheckoutComponent implements OnInit {
   }
 
   checkOut(){
-    this.order.OrderID = this.orderID;
-    this.order.User = this.user;
-    this.order.Item = this.item;
-    this.placeOrder(this.order);
+    let username=document.getElementById("logged").innerText;
+    let newname = document.getElementById("loggedUser").innerText;
+    if(username==""&& newname==""){
+      alert("you should login first!");
+    }else {
+      this.order.OrderID = this.orderID;
+      this.order.User = this.user;
+      this.order.Item = this.item;
+      console.log(this.order);
+      this.placeOrder(this.order);
+    };
+
   }
 
   placeOrder(order:Order){
@@ -51,30 +59,18 @@ export class CheckoutComponent implements OnInit {
   }
 
   retrieve(){
+    this.orderID=Date.parse(new Date().toString());
+    document.getElementById("IdNum").innerHTML=this.orderID.toString();
+    console.log(this.orderID);
     var str=sessionStorage.obj;
-    this.attribute =JSON.parse(str);
-    console.log(this.attribute["ItemName"]);
-    document.getElementById("items").innerHTML=this.attribute["ItemName"] + "&nbsp"+"&nbsp"+"&nbsp" +"&nbsp" +"&nbsp" + this.attribute["Price"];
+    this.item =JSON.parse(str);
+    console.log(this.item["ItemName"]);
+    document.getElementById("items").innerHTML=this.item["ItemName"] + "&nbsp"+"&nbsp"+"&nbsp" +"&nbsp" +"&nbsp" + this.item["Price"];
     let nameOfUser= sessionStorage.user;
     this.user=JSON.parse(nameOfUser);
     document.getElementById("orderUser").innerHTML=this.user["UserName"];
 
-
-
-
   }
-
-  checkOrder(){
-    let username=document.getElementById("logged").innerText;
-    let newname = document.getElementById("loggedUser").innerText;
-    if(username==""&& newname==""){
-      alert("you should login first!");
-    }else {
-
-    };
-
-  }
-
 
 
   // getOrderID(){
