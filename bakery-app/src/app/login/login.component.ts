@@ -53,7 +53,9 @@ export class LoginComponent implements OnInit {
             console.log("out for: " + match);
             //validation for illegal insert
             if (!match) {
-              errorInfo = "Your username or password does not match, please try again!"
+              errorInfo = "Your username or password does not match, please try again!";
+
+              //add the alert style here!!!!
               console.log("match before message is false......")
             } else {
               this.router.navigateByUrl("");
