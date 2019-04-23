@@ -3,19 +3,28 @@
     <a href="#"> MaxHomeMade </a>
     <p>BAKERY & CAFE</p>
   </div>
+
+  <!-- sign in and sign up part -->
   <div class="login" id="loginController">
     <a routerLink="/signin">SIGN IN</a> /
     <a routerLink="/signup">SIGN UP</a>
   </div>
-  <div class="login" id="loggedUser" (click)="viewOrder()">
-  </div>
+
+  <!-- show user name -->
+  <div class="login" id="loggedUser" (click)="viewOrder()"></div>
   <div id="logged"></div><br>
 
+  <!-- check out part -->
   <div class="checkOut" id="checkOutController">
     <a routerLink="/checkOut">CHECKOUT</a>
   </div>
-  <div id="CurrentLogOut"class="logOut" (click)= "logout()"><a>LOG OUT</a></div>
 
+  <!-- log out part -->
+  <div id="CurrentLogOut" class="logOut" (click)="logout()">
+    <a>LOG OUT</a>
+  </div>
+
+  <!-- navbar part -->
   <nav class="banner">
     <a routerLink="/about"><label>ABOUT</label></a>
     <a routerLink="/location"><label>LOCATIONS</label></a>
@@ -27,5 +36,3 @@
     <a routerLink="/orders"><label>ORDER ONLINE</label></a>
   </nav>
 </body>
-
-<!-- </html> -->

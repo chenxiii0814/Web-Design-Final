@@ -1,65 +1,64 @@
 <!--menus display div-->
 <div class="wrapper">
-    <div class="one" (click) = "view()">ALL DAY MENU </div>
-    <div class="two" (click) = "view2()">BRUNCH MENU </div>
-    <div class="three" (click) = "view3()">BREAD MENU</div>
-    <div class="four" (click) = "view4()">PASTRY&DESSERT<br/> MENU</div>
-    <div class="five" (click) = "view5()">GLUTEN MENU</div> 
-    <div class="seven" >PASSOVER MENU </div>
-    <div class="eight" >EASTER MENU</div>
+  <div class="one" (click)="view()">ALL DAY MENU </div>
+  <div class="two" (click)="view2()">BRUNCH MENU </div>
+  <div class="three" (click)="view3()">BREAD MENU</div>
+  <div class="four" (click)="view4()">PASTRY&DESSERT<br /> MENU</div>
+  <div class="five" (click)="view5()">GLUTEN MENU</div>
+  <div class="seven">PASSOVER MENU </div>
+  <div class="eight">EASTER MENU</div>
 </div>
 
 <!--All Day Menus List Display-->
-<div class="menusDetail" *ngIf = "clickb">
-        <ul class="itemlist">
-            <li>OATMEAL RASIN COOKIE</li>
-            <li>MILK</li>
-            <li >CUPCAKE</li>
-            <li >SHAKASHUKA</li>
-            <li>SANDWICH</li>
-            <li>BURGER</li>
-            <li>YORGURT</li>
-            <li>SALAD</li>
-          </ul>
+<div class="menusDetail" *ngIf="clickb">
+  <ul class="itemlist">
+    <li>OATMEAL RASIN COOKIE</li>
+    <li>MILK</li>
+    <li>CUPCAKE</li>
+    <li>SHAKASHUKA</li>
+    <li>SANDWICH</li>
+    <li>BURGER</li>
+    <li>YORGURT</li>
+    <li>SALAD</li>
+  </ul>
 </div>
 
 <!--Brunch Menus List Display-->
-<div class="menusDetail" *ngIf = "clickc">
-        <ul class="itemlist">
-            <li>OATMEAL RASIN COOKIE</li>
-            <li>MILK</li>
-            <li>SHAKASHUKA</li>
-          </ul>
+<div class="menusDetail" *ngIf="clickc">
+  <ul class="itemlist">
+    <li>OATMEAL RASIN COOKIE</li>
+    <li>MILK</li>
+    <li>SHAKASHUKA</li>
+  </ul>
 </div>
 
 <!--Bread Menus List Display-->
-<div class="menusDetail" *ngIf = "clickd">
-        <ul class="itemlist">
-            <li>CUPCAKE</li>
-            <li>SHAKASHUKA</li>
-            <li>CROISSANT</li>
-          </ul>
+<div class="menusDetail" *ngIf="clickd">
+  <ul class="itemlist">
+    <li>CUPCAKE</li>
+    <li>SHAKASHUKA</li>
+    <li>CROISSANT</li>
+  </ul>
 </div>
 
 <!--PASTRY&DESSERT Menus List Display-->
-<div class="menusDetail" *ngIf = "clicke">
-        <ul class="itemlist">
-            <li>CUPCAKE</li>
-            <li>CROISSANT</li>
-            <li>CHEESECAKE</li>
-            <li>TART</li>
-            <li>PIE</li>
-            <li>TIRAMISU</li>
-            <li>MACARONS</li>
-          </ul>
+<div class="menusDetail" *ngIf="clicke">
+  <ul class="itemlist">
+    <li>CUPCAKE</li>
+    <li>CROISSANT</li>
+    <li>CHEESECAKE</li>
+    <li>TART</li>
+    <li>PIE</li>
+    <li>TIRAMISU</li>
+    <li>MACARONS</li>
+  </ul>
 </div>
 
 <!--GLUTEN Menus List Display-->
-<div class="menusDetail" *ngIf = "clickf">
-        <ul class="itemlist">
-            <li>BURGER</li>
-            <li>CHEESECAKE</li>
-            <li>TIRAMISU</li>
-          </ul>
+<div class="menusDetail" *ngIf="clickf">
+  <ul class="itemlist">
+    <li>BURGER</li>
+    <li>CHEESECAKE</li>
+    <li>TIRAMISU</li>
+  </ul>
 </div>
-    
