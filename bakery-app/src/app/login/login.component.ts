@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   //  userList:User[]=[];
   userList: [User];
   testList: any;
-  loggedUser:User;
+  public loggedUser:User;
   public user;
 
 
@@ -25,7 +25,9 @@ export class LoginComponent implements OnInit {
 
 //get the user information and send it to database
   signIn() {
-    
+    if (document.getElementById("loginController").style.display='none') {
+      document.getElementById("CurrentLogOut").style.display='block';      
+    }
     let username = (<HTMLInputElement>document.getElementById("username")).value;
     let password = (<HTMLInputElement>document.getElementById("password")).value;
 
