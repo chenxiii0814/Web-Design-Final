@@ -93,7 +93,7 @@ display:inline-block;
 
  .idOfOrder{
    margin-left:-53px;
-   margin-top:20px;
+   margin-top:30px;
    @include display-order
  }
 
@@ -122,8 +122,8 @@ display:inline-block;
  }
  
  .itemInOrder{
-   margin-top:80px;
-   margin-left:-90px;
+   margin-top:90px;
+   margin-left:-80px;
    @include display-order
  }
 
@@ -133,9 +133,30 @@ display:inline-block;
  }
 
 .IdNum{
-  margin-top:40px;
+  margin-top:85px;
   right:20%;
   position:absolute;
   top: 36%;
+
+ }
+
+ .remove{
+    font-size:12px;
+    float:right;
+    margin-right:-100px;
+    margin-top:-20px;
+    border:1px solid black;
+    width:10px;
+ }
+
+ .priceOfOrder{
+    margin-top:20px;
+    margin-left:10px;
+ }
+
+ .totalPrice{
+   float:right;
+   margin-top:0px;
+  
 
  }
