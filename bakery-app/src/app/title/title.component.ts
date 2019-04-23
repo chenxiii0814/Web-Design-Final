@@ -50,7 +50,8 @@ export class TitleComponent implements OnInit {
   }
 
   viewOrder(){
-    this.router.navigateByUrl('userhome')
+    console.log("12345");
+    this.router.navigateByUrl('userhome');
   }
 
 }
