@@ -5,6 +5,11 @@
   margin: 0 auto;
 }
 
+.wrapper:hover{
+  border-bottom: #121212;
+  font-style: italic;
+}
+
 .wrapper > div {
   border: 0.9px solid #121212;
 //   border-radius: 5px;
@@ -77,11 +82,14 @@ a:hover{color: rgba(220,220,220,0.8);}
 
   .itemlist {
     //margin: 0 0 2em 0;
+    position: absolute;
+    left:16%;
+
     list-style-type: none;
     padding: 0;
-    width: 15em;
-    margin-left:500px;
-    background-color:rgb(243,241,241);
+    width: 23em;
+    border: 1px solid #121212;
+    //background-color:rgb(243,241,241);
     border-radius: 2px;
   }
 
@@ -137,6 +145,7 @@ a:hover{color: rgba(220,220,220,0.8);}
   //   margin-left: 100px
   // }
 
-  // .menusDetail{
-  //   margin-left:50px;
-  // }
+//.menusDetail{
+//  position: absolute;
+//  left:10%;
+//}
