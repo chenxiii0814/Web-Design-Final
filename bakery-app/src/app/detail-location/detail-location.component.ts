@@ -19,6 +19,7 @@ import {delay} from "rxjs/operators";
   ]
 })
 export class DetailLocationComponent implements OnInit {
+  //set the booleans to trigger the animations
   isShown1 = true;
   isShown2 = true;
   isShown3 = true;
@@ -28,10 +29,12 @@ export class DetailLocationComponent implements OnInit {
   ngOnInit() {
     this.wait();
   }
-
+//go back to last page
   goBack(){
     history.go(-1);
   }
+
+  //function to read boolean and set when to begin the animations
   async wait(){
     await delay(1000);
     this.isShown1=!this.isShown1;
