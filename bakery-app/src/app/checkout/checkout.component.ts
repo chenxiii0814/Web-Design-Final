@@ -2,6 +2,7 @@ import {Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Order} from './../order-model/order';
 import {SessionStorageService} from "ngx-webstorage";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -17,9 +18,10 @@ export class CheckoutComponent implements OnInit {
   private item;
           attribute;
           userlist;
+
   private order = new Order(this.orderID, this.user, this.item)
 
-  constructor(private http:HttpClient,private sessionSt:SessionStorageService) { }
+  constructor(private http:HttpClient,private sessionSt:SessionStorageService, private router:Router){}
 
   ngOnInit() {
     this.retrieve();
@@ -37,6 +39,7 @@ export class CheckoutComponent implements OnInit {
       this.order.Item = this.item;
       console.log(this.order);
       // this.placeOrder(this.order);
+      this.router.navigateByUrl('/userhome')
     };
 
     if(Number((<HTMLInputElement>document.getElementById('tip')).value)>=0){
@@ -107,7 +110,6 @@ export class CheckoutComponent implements OnInit {
     let nameOfUser= sessionStorage.user;
     this.user=JSON.parse(nameOfUser);
     document.getElementById("orderUser").innerHTML=this.user["UserName"];
-
   }
 
 
