@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 // import { MENUSS } from '../menusList';
 import { Item } from "../item";
 
@@ -53,13 +52,7 @@ export class MenuComponent implements OnInit {
     this.clicke = false;
     this.clickf = true;
   }
-  display(){
-    this.clickb = false;
-    this.clickc = false;
-    this.clickd = false;
-    this.clicke = false;
-    this.clickf = false;
-  }
+
 
   }
 
