@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Item } from "../item";
 import { Image } from "../image";
 import { SessionStorageService } from "ngx-webstorage";
+import { User } from '../user';
 
 @Component({
   selector: 'app-orders',
@@ -26,11 +27,17 @@ export class OrdersComponent implements OnInit {
   itemList: Item[] = [];
   selectedItem: Item;
   addedItem: Item;
+  loggedUser:User;
   // public data:any[];
 
   constructor(private httpClient: HttpClient, private sessionSt: SessionStorageService) { }
 
   saveInLocal(name, price): void {
+    // alert("ssssssssssss")
+    if(this.loggedUser == undefined){
+      alert("You need to sign in first!");
+    }
+
     let itemKey = name;
     this.sessionSt.store(name, price);
     console.log("the name is:" + name + 'its price:' + price);
@@ -58,10 +65,13 @@ export class OrdersComponent implements OnInit {
 
   ngOnInit() {
     this.GetProfile();
-    console.log(this.imageList[1]);
+    // console.log(this.imageList[1]);
+    // console.log(this.loggedUser);
   }
+
   onSelect(item: Item): void {
     this.selectedItem = item;
+    console.log(this.selectedItem)
   }
 
   public recentItems = "None";
