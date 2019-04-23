@@ -1,4 +1,4 @@
-@mixin style-pic{
+%style-img{
   width: 300px;
   height: 300px;
   background-repeat:no-repeat;
@@ -108,65 +108,65 @@
 
   .COOKIE{
     background-image: url("oatmeal.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .MILK{
     background-image: url("milk.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .CUPCAKE{
     background-image: url("cupcake.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .SHAKASHUKA{
     background-image: url("shakashuka.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .SANDWICH{
     background-image: url("sandwich.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .BURGER{
     background-image: url("burger.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .TART{
     background-image: url("tart.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .YOGURT{
     background-image: url("yogurt.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .CHEESECAKE{
     background-image: url("cheesecake.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .PIE{
     background-image: url("pie.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .MACARONS{
     background-image: url("macarom.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .SALAD{
     background-image: url("salad.png");
-    @include style-pic;
+    @extend %style-img;
   }
 
   .TIRAMISU{
     background-image: url("tiramisu.png");
-    @include style-pic;
+    @extend %style-img;
   }
