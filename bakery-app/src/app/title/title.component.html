@@ -1,21 +1,17 @@
-
-
-
-
 <body>
   <div class="header">
     <a href="#"> MaxHomeMade </a>
     <p>BAKERY & CAFE</p>
   </div>
   <div class="login" id="loginController">
-      <a routerLink="/signin">SIGN IN</a> /
-      <a routerLink="/signup">SIGN UP</a>
-    </div>
-  <div class="login" id="loggedUser"></div>
+    <a routerLink="/signin">SIGN IN</a> /
+    <a routerLink="/signup">SIGN UP</a>
+  </div>
+  <div class="login" id="loggedUser" (click)=logout()></div>
   <div id="logged"></div>
 
   <div class="checkOut" id="checkOutController">
-      <a routerLink="/checkOut">CHECKOUT</a>
+    <a routerLink="/checkOut">CHECKOUT</a>
   </div>
 
   <nav class="banner">
@@ -25,8 +21,8 @@
     <a routerLink="/career"><label>CAREERS</label></a>
     <a routerLink="/contact"><label>CONTACT</label></a>
     <a routerLink="/news"><label>PRESS & NEWS</label></a>
-    <a routerLink = "/shop"><label>SHOP</label></a>
-    <a routerLink = "/orders"><label>ORDER ONLINE</label></a>
+    <a routerLink="/shop"><label>SHOP</label></a>
+    <a routerLink="/orders"><label>ORDER ONLINE</label></a>
   </nav>
 </body>
 

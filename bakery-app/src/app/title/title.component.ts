@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {animate, state, style, transition, trigger} from "@angular/animations";
-import {delay} from "rxjs/operators";
+import { Component, Input, OnInit } from '@angular/core';
+import { animate, state, style, transition, trigger } from "@angular/animations";
+import { delay } from "rxjs/operators";
 
 @Component({
   selector: 'app-title',
@@ -39,6 +39,12 @@ export class TitleComponent implements OnInit {
 
     // this.isShown = !this.isShown;
 
+  }
+
+  logout() {    
+    document.getElementById("loggedUser").style.display='none';
+    document.getElementById("loginController").style.display = 'block';
+    alert("logout");
   }
 
 }
