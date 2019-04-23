@@ -1,47 +1,46 @@
 <div class="list">
-    <label>MENU</label>
+  <label>MENU</label>
   <ul class="itemlist">
-    <li *ngFor="let item of itemList"
-      [class.selected]="item === selectedItem"
-      (click)="onSelect(item)">
+    <li *ngFor="let item of itemList" [class.selected]="item === selectedItem" (click)="onSelect(item)">
       <span class="badge"></span> {{item.ItemName}}
-
     </li>
   </ul>
-  
-  <div *ngIf="selectedItem" class = "itemDetail">
+</div>
+
+<div class="pic_detail">
+  <div class={{selectedItem.ItemName}}></div>
+  <div *ngIf="selectedItem" class="itemDetail">
     <h2>{{selectedItem.ItemName | uppercase}} DETAILS</h2>
     <div><span>ItemName: </span>{{selectedItem.ItemName}}</div>
     <div><span>Price: </span>{{selectedItem.Price}}</div>
     <div><span>Ingredient: </span>{{selectedItem.Ingredient}}</div>
     <button (click)="saveInLocal(selectedItem.ItemName,selectedItem.Price)">ADD TO CART ></button>
   </div>
-  </div>
-
+</div>
 
 <!--<button (click)="saveInLocal(key,1)">set the session</button>-->
 
-    <!-- <li *ngFor="let item of itemList" [class.selected]="item === selectedItem" (click)="onSelect(item)">
+<!-- <li *ngFor="let item of itemList" [class.selected]="item === selectedItem" (click)="onSelect(item)">
       <span class="badge red"><button (click)="addItem(item)">add</button></span> {{item.ItemName}}
     </li> -->
-    <!-- <li *ngFor="let item of itemList">
+<!-- <li *ngFor="let item of itemList">
     <div  class="thumbnail"> -->
-      <!-- <img src="https://1.bp.blogspot.com/-93v_s-iwmEE/U1OM0vymMOI/AAAAAAAB6PU/LiPMNit3CDQ/s1600/jennifer+(23).jpg" alt=""> -->
-       <!-- <div class="caption">
+<!-- <img src="https://1.bp.blogspot.com/-93v_s-iwmEE/U1OM0vymMOI/AAAAAAAB6PU/LiPMNit3CDQ/s1600/jennifer+(23).jpg" alt=""> -->
+<!-- <div class="caption">
          <h3>{{item.ItemName}}</h3> -->
-         <!-- <p>
+<!-- <p>
            <strong>Price: </strong>${{item.Price}}
          </p> -->
-         <!-- <p>
+<!-- <p>
            <button class="btn btn-primary" (click)="addItem(item)">Add to Cart</button>
            <button class="btn btn-default" (click)="onSelect(item)">View Details</button>
          </p> -->
-       <!-- </div>
+<!-- </div>
     </div>
   </li>
   </ul> -->
 
-  <!-- <div class="orderlist ">
+<!-- <div class="orderlist ">
     add items:{{recentItems}}<br />
     Cart:
     <ul>
@@ -49,7 +48,7 @@
     </ul>
   </div> -->
 
-  <!-- <div *ngIf="selectedItem" class="itemDetail">
+<!-- <div *ngIf="selectedItem" class="itemDetail">
     <h2>{{selectedItem.ItemName | uppercase}} DETAILS</h2>
     <div><span>ItemName: </span>{{selectedItem.ItemName}}</div>
     <div><span>Price: </span>{{selectedItem.Price}}</div>
