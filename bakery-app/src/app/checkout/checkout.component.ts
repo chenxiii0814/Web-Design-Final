@@ -26,6 +26,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   checkOut(){
+
     let username=document.getElementById("logged").innerText;
     let newname = document.getElementById("loggedUser").innerText;
     if(username==""&& newname==""){
@@ -37,6 +38,45 @@ export class CheckoutComponent implements OnInit {
       console.log(this.order);
       this.placeOrder(this.order);
     };
+
+
+
+    if(Number((<HTMLInputElement>document.getElementById('tip')).value)>=0){
+      console.log("Thanks for your tip");
+    }
+    else {
+      alert("tip cannot be negetive.");
+      return false;
+    }
+
+    let errorInfo = "";
+    if ((<HTMLInputElement>document.getElementById('firstName')).value == "") {
+      errorInfo = "First name cannot be null!\n";
+    }
+    if ((<HTMLInputElement>document.getElementById('lastName')).value == "") {
+      errorInfo = "Last name cannot be null!\n";
+    }
+    if ((<HTMLInputElement>document.getElementById('email')).value == "") {
+      errorInfo = "Email cannot be null!\n";
+    }
+    if ((<HTMLInputElement>document.getElementById('cardNumber')).value == "") {
+      errorInfo = "Card number cannot be null!\n";
+    }
+    if ((<HTMLInputElement>document.getElementById('expiration')).value == "") {
+      errorInfo = "Expiration cannot be null!\n";
+    }
+    if ((<HTMLInputElement>document.getElementById('cvv')).value == "") {
+      errorInfo = "cvv cannot be null!\n";
+    }
+    if ((<HTMLInputElement>document.getElementById('zipCode')).value == "") {
+      errorInfo = "Zip code cannot be null!\n";
+    }
+    if (errorInfo == "") {
+      this.placeOrder(this.order);
+    }else {
+      alert(errorInfo);
+      return false;
+    }
 
   }
 
