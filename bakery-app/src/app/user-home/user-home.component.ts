@@ -18,8 +18,21 @@ export class UserHomeComponent implements OnInit {
   }
 
   getOrder(){
+    var orderShow = "<div class='oderShow'>";
+    let userNow = JSON.parse(sessionStorage.user)["UserName"];
+    console.log("kakakaka"+userNow);
     this.http.get('http://localhost:3000/orders').subscribe((response)=>{
       this.orderList = response;
+      for(let i=0;i<this.orderList.length;i++){
+        let order=this.orderList[i];
+        let orderU = order["User"];
+        let orderName = orderU["UserName"];
+        let orderItems = order["Item"];
+        // console.log(orderName);
+        if(orderName==userNow){
+          orderShow+='<div class="orderId111">OrderID :'+order["OrderID"]+'<p class="ord">ITEM:'+orderItems["ItemName"]+'</p>';
+        }
+      }document.getElementById("showList").innerHTML=orderShow;
     })
   }
 
