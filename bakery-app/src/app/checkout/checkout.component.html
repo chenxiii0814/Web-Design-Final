@@ -41,16 +41,15 @@
 </div>
 </form>
 
-<div class = "orderDetail">YOUR ORDER
-  <form action = "/">
-  <div id = "orderUser" class = "userOfOrder">USERNAME:</div>
+<div class = "orderDetail">YOUR ORDER<br>
+  <label id = "UserOrder" class = "UserOrder">CLIENT:</label>
+  <div id = "orderUser" class = "userOfOrder"></div>
   <div id = "orderID" class = "idOfOrder">ORDER ID:</div>
+  <div class = "itemInOrder">
   <div id="itemOfOrder" class ="orderItem">ITEMS:
-    <div id="items"></div>
-    <div (click)="checkOrder()">checkout</div>
+    <div id="items" class = "itemList"></div>
+    <div (click)="checkOrder()" class="checkOrder">CHECKOUT</div>
   </div>
-
-
-  </form>
+</div>
   </div>
 </div>

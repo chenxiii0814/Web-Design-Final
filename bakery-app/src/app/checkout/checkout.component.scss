@@ -92,20 +92,42 @@ display:inline-block;
  }
 
  .idOfOrder{
-   margin-left:-80px;
+   margin-left:-53px;
    margin-top:20px;
    @include display-order
  }
 
- .userOfOrder{
-   margin-left:10px;
-   margin-top:80px;
+ .UserOrder{
+   margin-left:20px;
+   margin-top:20px;
    @include display-order
  }
 
  .orderItem{
-   margin-top:140px;
-   margin-left:-80px;
-   @include display-order
+   margin-top:-30px;
+   margin-left:-10px;
+   padding:0px;
+ }
+
+ .itemList{
+   margin-left:20px;
+   margin-top:10px;
+   padding:0px;
+ }
+
+ .checkOrder{
+   margin-left:10px;
+   margin-top:50px;
+   padding:0px;
  }
  
+ .itemInOrder{
+   margin-top:80px;
+   margin-left:-90px;
+   @include display-order
+ }
+
+ .userOfOrder{
+   margin-top:13px;
+   //  margin-left:-100px
+ }
