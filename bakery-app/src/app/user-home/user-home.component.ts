@@ -15,7 +15,6 @@ export class UserHomeComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe((params)=>this.username=params.username);
-    this.getOrder()
   }
 
   getOrder(){

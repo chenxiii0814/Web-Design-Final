@@ -36,8 +36,11 @@ export class TitleComponent implements OnInit {
     document.getElementById("CurrentLogOut").style.display = 'none';
   }
 
-  viewOrder() {
-    this.router.navigateByUrl('userhome')
+
+  viewOrder(){
+    console.log("12345");
+    this.router.navigateByUrl('userhome');
+
   }
 
 }
