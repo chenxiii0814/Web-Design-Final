@@ -36,10 +36,8 @@ export class CheckoutComponent implements OnInit {
       this.order.User = this.user;
       this.order.Item = this.item;
       console.log(this.order);
-      this.placeOrder(this.order);
+      // this.placeOrder(this.order);
     };
-
-
 
     if(Number((<HTMLInputElement>document.getElementById('tip')).value)>=0){
       console.log("Thanks for your tip");
