@@ -7,7 +7,7 @@
 
 .list{
   position: absolute;
-  left: 100px;
+  left: 80px;
   margin-top: 20px;
 
 }
@@ -99,11 +99,26 @@
   }
  
   .pic_detail{
-    margin-right: 200px;
-    margin-top: 90px;
-    float: right;
-    width: 500px;
+    margin-left: 470px;
+    margin-top: 60px;
+    float: left;
+    width: 300px;
     height: 800px;
+    // background-color: #541111
+  }
+
+  .cart{
+    margin-right: 200px;
+    margin-top: 60px;
+    float: right;
+    width: 250px;
+    height: 550px;
+    border: black solid 0.8px;
+    text-align: left
+  }
+
+  .cart_title{
+    font-size:120%;
   }
 
   .COOKIE{
