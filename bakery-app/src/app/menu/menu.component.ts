@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { MENUSS } from '../menusList';
+// import { MENUSS } from '../menusList';
 import { Item } from "../item";
 
 @Component({

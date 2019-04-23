@@ -1,57 +1,46 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from "@angular/animations";
 import { delay } from "rxjs/operators";
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { LoginComponent } from './../login/login.component';
 
 @Component({
   selector: 'app-title',
   templateUrl: `./title.component.html`,
   styleUrls: [`./title.component.scss`],
-
-  // animations:[trigger("slide_main",[
-  //   //different style in different states
-  //   state('shown',style({opacity: 1, height:'300px'})),
-  //   state('hidden',style({opacity:0.5, height:'300px'})),
-  //   // transition: control when and how to transact
-  //   transition('shown=>hidden',animate('3s')),
-  //   transition('hidden=>shown',animate('3s'))
-  // ])]
+  providers: [LoginComponent]
 })
 export class TitleComponent implements OnInit {
-  // isShown = false;
-  // // @Input() forSlides : boolean =true;
-  // bannerPic:any[] = [
-  //   {img:'main_pic2'},
-  //   {img:'main_pic3'},
-  //   {img:'main_pic4'},
-  // ]
 
+  // loggedUser: User;
 
-  constructor(private router:Router) { }
+  constructor(private router: Router, private comp: LoginComponent) { }
 
   ngOnInit() {
-
-    // this.wait1s();
-
+    if (document.getElementById("loginController").style.display = 'block') {
+      document.getElementById("CurrentLogOut").style.display = 'none';
+    }
   }
 
   async wait1s() {
     await delay(1000);
-
-    // this.isShown = !this.isShown;
-
   }
 
-//set the logout style
-  logout() {    
-    document.getElementById("loggedUser").style.display='none';
+  //set the logout style
+  logout() {
+
+    console.log(this.comp.loggedUser)
+    document.getElementById("loggedUser").style.display = 'none';
     document.getElementById("loginController").style.display = 'block';
-    alert("logout");
+    alert("Log out");
+    document.getElementById("CurrentLogOut").style.display = 'none';
   }
+
 
   viewOrder(){
     console.log("12345");
     this.router.navigateByUrl('userhome');
+
   }
 
 }
