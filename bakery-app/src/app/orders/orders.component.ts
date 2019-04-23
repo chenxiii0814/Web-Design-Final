@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Item } from "../item";
 import { Image } from "../image";
 import { SessionStorageService } from "ngx-webstorage";
-import { User } from '../user';
+
 
 @Component({
   selector: 'app-orders',
@@ -92,14 +92,5 @@ export class OrdersComponent implements OnInit {
     this.cart.push(item);
     alert(item + "was added!");
   }
-
-  // public testlist = ['item1', 'item2', 'item3'];
-  // public recentItems = "None";
-  // public cart = [];
-  // addItem(test) {
-  //   this.recentItems=test;
-  //   this.cart.push(test);
-  //   alert(test + "was added!");
-  // 
 
 }
