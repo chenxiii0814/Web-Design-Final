@@ -16,6 +16,7 @@ export class CheckoutComponent implements OnInit {
   private user;
   private item;
           attribute;
+          userlist;
   private order = new Order(this.orderID, this.user, this.item)
 
   constructor(private http:HttpClient,private sessionSt:SessionStorageService) { }
@@ -52,11 +53,29 @@ export class CheckoutComponent implements OnInit {
   retrieve(){
     var str=sessionStorage.obj;
     this.attribute =JSON.parse(str);
-    console.log(this.attribute);
-    let itemDetail = 
-    // let showItem = document.getElementById('items');
-    
+    console.log(this.attribute["ItemName"]);
+    document.getElementById("items").innerHTML=this.attribute["ItemName"];
+    let usernameeeeee= sessionStorage.user;
+    this.user=JSON.parse(usernameeeeee);
+    document.getElementById("orderUser").innerHTML=this.user["UserName"];
+
+
+
+
   }
+
+  checkOrder(){
+    let username=document.getElementById("logged").innerText;
+    let newname = document.getElementById("loggedUser").innerText;
+    if(username==""&& newname==""){
+      alert("you should login first!");
+    }else {
+
+    };
+
+  }
+
+
 
   // getOrderID(){
   //   this.http.get('http/localhost:3000/orders').subscribe((response)=>{
