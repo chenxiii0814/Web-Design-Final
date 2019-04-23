@@ -39,7 +39,7 @@ export class CheckoutComponent implements OnInit {
       this.order.Item = this.item;
       console.log(this.order);
       // this.placeOrder(this.order);
-      this.router.navigateByUrl('/userhome')
+      this.router.navigateByUrl('/')
     };
 
     if(Number((<HTMLInputElement>document.getElementById('tip')).value)>=0){
