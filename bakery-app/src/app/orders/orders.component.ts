@@ -27,14 +27,16 @@ export class OrdersComponent implements OnInit {
   itemList: Item[] = [];
   selectedItem: Item;
   addedItem: Item;
-  loggedUser:User;
+  loggedUser:String;
   // public data:any[];
 
   constructor(private httpClient: HttpClient, private sessionSt: SessionStorageService) { }
 
   saveInLocal(name, price): void {
     // alert("ssssssssssss")
-    if(this.loggedUser == undefined){
+    this.loggedUser = document.getElementById("loggedUser").innerHTML;
+
+    if(this.loggedUser == ""){
       alert("You need to sign in first!");
     }
 
