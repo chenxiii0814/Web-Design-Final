@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-// import { MENUSS } from '../menusList';
-import { Item } from "../item";
+
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
+
+//all the click are default 'false' in order to hide the list div
 export class MenuComponent implements OnInit {
   clickb = false;
   clicka=false;
@@ -17,6 +18,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {}
   
+  //click event binding with the status of specific transfer of 'click' in order to diaplay the list div
   view(){
     this.clickb = true;
     this.clickc = false;

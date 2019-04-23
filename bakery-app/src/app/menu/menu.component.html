@@ -1,13 +1,4 @@
-<!-- <div class="menu_space">
-    <div>
-        <div class="specified_menu menu_div">All Day</div>
-        <div class="specified_menu menu_div">Brunch Menu</div>
-        <div class="specified_menu menu_div">Bread Menu</div>
-        <div class="specified_menu menu_div">Pastry&Dessert</div>
-    </div>
-</div>> -->
-
-
+<!--menus display div-->
 <div class="wrapper">
     <div class="one" (click) = "view()">ALL DAY MENU </div>
     <div class="two" (click) = "view2()">BRUNCH MENU </div>
@@ -17,6 +8,8 @@
     <div class="seven" >PASSOVER MENU </div>
     <div class="eight" >EASTER MENU</div>
 </div>
+
+<!--All Day Menus List Display-->
 <div class="menusDetail" *ngIf = "clickb">
         <ul class="itemlist">
             <li>OATMEAL RASIN COOKIE</li>
@@ -29,6 +22,8 @@
             <li>SALAD</li>
           </ul>
 </div>
+
+<!--Brunch Menus List Display-->
 <div class="menusDetail" *ngIf = "clickc">
         <ul class="itemlist">
             <li>OATMEAL RASIN COOKIE</li>
@@ -36,6 +31,8 @@
             <li>SHAKASHUKA</li>
           </ul>
 </div>
+
+<!--Bread Menus List Display-->
 <div class="menusDetail" *ngIf = "clickd">
         <ul class="itemlist">
             <li>CUPCAKE</li>
@@ -43,6 +40,8 @@
             <li>CROISSANT</li>
           </ul>
 </div>
+
+<!--PASTRY&DESSERT Menus List Display-->
 <div class="menusDetail" *ngIf = "clicke">
         <ul class="itemlist">
             <li>CUPCAKE</li>
@@ -54,6 +53,8 @@
             <li>MACARONS</li>
           </ul>
 </div>
+
+<!--GLUTEN Menus List Display-->
 <div class="menusDetail" *ngIf = "clickf">
         <ul class="itemlist">
             <li>BURGER</li>
@@ -61,8 +62,4 @@
             <li>TIRAMISU</li>
           </ul>
 </div>
-    <!-- <div class="menusDetail" *ngIf = "clicka" >
-        <div>Name</div>
-        <div>Price</div>
-    </div>
-    <div *ngIf = "clickb"></div> -->
+    

@@ -45,7 +45,9 @@
   <div class = "itemInOrder">
   <div id="itemOfOrder" class ="orderItem">ITEMS:
     <div id="items" class = "itemList"></div>
-    <div (click)="checkOrder()" class="checkOrder">CHECKOUT</div>
-
+    <div id="remove" class = "remove" (click) = "removeItem()">X</div>
+  </div>
+  <div id="priceOfOrder" class="priceOfOrder">TOTAL PRICE:
+  <div id="totalPrice" class="totalPrice"></div>
   </div>
 </div>

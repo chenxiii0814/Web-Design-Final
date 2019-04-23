@@ -33,7 +33,7 @@ export class CheckoutComponent implements OnInit {
     let newname = document.getElementById("loggedUser").innerText;
     if(username==""&& newname==""){
       alert("you should login first!");
-    }else {
+    }else{
       this.order.OrderID = this.orderID;
       this.order.User = this.user;
       this.order.Item = this.item;
@@ -41,6 +41,7 @@ export class CheckoutComponent implements OnInit {
       // this.placeOrder(this.order);
       this.router.navigateByUrl('/')
     };
+
 
     if(Number((<HTMLInputElement>document.getElementById('tip')).value)>=0){
       console.log("Thanks for your tip");
@@ -107,10 +108,19 @@ export class CheckoutComponent implements OnInit {
     this.item =JSON.parse(str);
     console.log(this.item["ItemName"]);
     document.getElementById("items").innerHTML=this.item["ItemName"] + "&nbsp"+"&nbsp"+"&nbsp" +"&nbsp" +"&nbsp" + this.item["Price"];
+    document.getElementById("totalPrice").innerHTML="&nbsp"+"&nbsp"+ this.item['Price'];
     let nameOfUser= sessionStorage.user;
     this.user=JSON.parse(nameOfUser);
     document.getElementById("orderUser").innerHTML=this.user["UserName"];
   }
+
+  removeItem(){
+    document.getElementById("items").style.display = "none";
+    document.getElementById("remove").style.display = "none";
+    document.getElementById("totalPrice").style.display = "none";
+    delete this.item;
+  }
+
 
 
   // getOrderID(){

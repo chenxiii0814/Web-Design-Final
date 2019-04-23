@@ -1,3 +1,12 @@
+%style_img{
+  position: absolute;
+  right: 90px;
+  width: 300px;
+  height: 480px;
+  margin-top:100px;
+  margin-right:150px;
+}
+
 .back{
   cursor: pointer;
   margin-top:20px;
@@ -72,31 +81,15 @@
 
   #store_pic1{
     background-image: url("bakery_large.png");
-    position: absolute;
-    right: 90px;
-    width: 300px;
-    height: 480px;
-    margin-top:100px;
-
-    margin-right:150px;
+    @extend %style_img;  
 }
 
 #store_pic2{
   background-image: url("location.png");
-  position: absolute;
-  right: 90px;
-  width: 300px;
-  height: 480px;
-  margin-top:100px;
-  margin-right:150px;
+  @extend %style_img;  
 }
 
 #store_pic3{
   background-image: url("location2.png");
-  position: absolute;
-  right: 90px;
-  width: 300px;
-  height: 480px;
-  margin-top:100px;
-  margin-right:150px;
+  @extend %style_img;  
 }
