@@ -17,12 +17,14 @@ a{
   @include style-a;
   @include style-a-hover;
 }
+
 a:hover{color: rgba(220,220,220,0.8);}
 
 .userProfile{
   line-height: 30px;
 }
 
+//would show picture
 #profile_pic1{
   background-image: url("profile_pic1.png");
   @include style-for-pic-profile;
