@@ -24,6 +24,10 @@ export class LoginComponent implements OnInit {
 
   //get the user information and send it to database
   signIn() {
+    //edit the loop to judge the login station
+                    if (document.getElementById("loginController").style.display = 'none') {
+                      document.getElementById("CurrentLogOut").style.display = 'block';
+                    }
     
     let username = (<HTMLInputElement>document.getElementById("username")).value;
     let password = (<HTMLInputElement>document.getElementById("password")).value;
@@ -53,11 +57,11 @@ export class LoginComponent implements OnInit {
               errorInfo = "Your username or password does not match, please try again!";
 
               //alert
-              alert(errorInfo);
+              // alert(errorInfo);
               console.log("match before message is false......");
               console.log(sessionStorage.user);
               // sessionStorage.user = undefined;
-              return false;
+              // return false;
             }
             else if (match) {
               this.router.navigateByUrl("");
@@ -76,10 +80,10 @@ export class LoginComponent implements OnInit {
                       console.log(sessionStorage.user);
                       console.log("session:" + JSON.parse(sessionStorage.user)['UserName']);
                     }
-                    //edit the loop to judge the login station
-                    if (document.getElementById("loginController").style.display = 'none') {
-                      document.getElementById("CurrentLogOut").style.display = 'block';
-                    }
+                    // //edit the loop to judge the login station
+                    // if (document.getElementById("loginController").style.display = 'none') {
+                    //   document.getElementById("CurrentLogOut").style.display = 'block';
+                    // }
                   }
                 }
 
