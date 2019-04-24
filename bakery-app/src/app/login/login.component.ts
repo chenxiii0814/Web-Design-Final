@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
   public loggedUser: User;
   public user;
 
-
   constructor(private httpClient: HttpClient, private router: Router) { }
 
   ngOnInit() {
@@ -32,7 +31,7 @@ export class LoginComponent implements OnInit {
     let match: boolean = false;
 
     let errorInfo = "";
-
+    //check if the user is in the db
     this.httpClient.get('http://localhost:3000/users/')
       .subscribe(
         (data: [User]) => {

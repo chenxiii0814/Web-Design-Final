@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { animate, state, style, transition, trigger } from "@angular/animations";
+
 import { delay } from "rxjs/operators";
 import { Router } from '@angular/router';
 import { LoginComponent } from './../login/login.component';
@@ -25,13 +25,10 @@ export class TitleComponent implements OnInit {
     }
   }
 
-  async wait1s() {
-    await delay(1000);
-  }
+
 
   //set the logout style
   logout() {
-
     console.log(this.comp.loggedUser)
     document.getElementById("loggedUser").style.display = 'none';
     document.getElementById("loginController").style.display = 'block';
@@ -39,7 +36,7 @@ export class TitleComponent implements OnInit {
     document.getElementById("CurrentLogOut").style.display = 'none';
   }
 
-
+//redirect to user's homepage
   viewOrder(){
     console.log("12345");
     this.router.navigateByUrl('userhome');
