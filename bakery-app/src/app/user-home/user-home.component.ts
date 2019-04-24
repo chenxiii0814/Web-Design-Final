@@ -15,8 +15,8 @@ import { delay } from "rxjs/operators";
       state('next', style({ 'z-index': '2' })),
       state('last', style({ 'z-index': '1' })),
       state('on', style({ 'z-index': '3', 'opacity': '0' })),
-      transition('prev=>on', [animate('2s')]),
-      transition('next=>on', [animate('2s 2s')]),
+      transition('prev=>on', [animate('3s')]),
+      transition('next=>on', [animate('3s 2s')]),
       transition('last=>on', [animate('2s 4s')])
     ])
   ]
