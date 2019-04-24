@@ -33,6 +33,8 @@ import { HttpClientModule }    from '@angular/common/http';
 import { OrdersComponent } from './orders/orders.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 
@@ -62,6 +64,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     OrdersComponent,
     UserHomeComponent,
     CheckoutComponent,
+    OrderHistoryComponent,
+    EditProfileComponent,
     
 
 
@@ -143,10 +147,17 @@ import { CheckoutComponent } from './checkout/checkout.component';
         component: OrdersComponent
       },
       {
+        path:'userhome/editprofile',
+        component: EditProfileComponent
+      }, 
+      {
+        path:'userhome/orderhistory',
+        component: OrderHistoryComponent
+      },
+      {
         path:'userhome',
         component: UserHomeComponent
       },
-
       {
         path:'**',
         component: NotFoundComponent
