@@ -1,0 +1,39 @@
+input {
+    border: 1px solid #121212;
+    border-radius: 1px;
+    font-size: larger;
+    height: 30px;
+    width: 150px;
+    margin-right:830px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    float:right;
+  }
+  
+  body{
+    text-align: left;
+    margin-left: 16%;
+    margin-top: 30px;
+  }
+  body h3{
+    font-size: 20px;
+  }
+  //use a middle container to show the changed value
+  #setchange{
+    display: none;
+  }
+  
+  #profile>input{
+    border: 1px solid #000;
+    position: absolute;
+    left:80%;
+  
+    margin-left:10px;
+  }
+  button{
+    border:1px solid #000;
+    font-size: 15px;
+    padding: 5px;
+    margin:3px;
+    border-radius:2px;
+  }
+  

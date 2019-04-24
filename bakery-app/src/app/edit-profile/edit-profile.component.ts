@@ -4,11 +4,12 @@ import { HttpClient } from '@angular/common/http';
 import { User } from "../user";
 
 @Component({
-  selector: 'app-user-home',
-  templateUrl: `./user-home.component.html`,
-  styleUrls: [`./user-home.component.scss`]
+  selector: 'app-edit-profile',
+  templateUrl: './edit-profile.component.html',
+  styleUrls: ['./edit-profile.component.scss']
 })
-export class UserHomeComponent implements OnInit {
+export class EditProfileComponent implements OnInit {
+
   username: String;
   private orderList;
 

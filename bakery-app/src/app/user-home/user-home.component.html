@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>ORDER HISTORY</title>
+  <meta charset="UTF-8">
+  <title>ORDER HISTORY</title>
 </head>
+
 <body>
+  <a routerLink="/userhome/orderhistory">VIEW ORDER DETAIL</a><br>
+  <a routerLink="/userhome/editprofile">EDIT YOUR PROFILE</a>
 
-<button (click)="getOrder()"  >VIEW DETAIL</button>
-<!--<input type="submit" value="VIEW DETAIL" (click)="getOrder()"/>-->
-<h3>
-  ORDER HISTORY:
-</h3>
-<div class="orderList" id="showList">
+  <!-- <button (click)="getOrder()">VIEW ORDER DETAIL</button>
+  <button (click)="getUserProfile()">EDIT YOUR PROFILE</button> -->
+  <!--<input type="submit" value="VIEW DETAIL" (click)="getOrder()"/>-->
+  <!-- <h3>
+    ORDER HISTORY:
+  </h3>
+  <div class="orderList" id="showList">
 
-</div>
-<div id="profile"><p>USER INFORMATION</p>
-  <div id="userInfo">
-    <input #usernn type="text" [value]="userN" (blur)="USERNAME=usernn.value"/>
-    <input #userpp type="text" [value]="userP" (blur)="PHO=userpp.value"/>
-    <input #userem type="text" [value]="userE" (blur)="EML=userem.value" />
-  </div></div>
+  </div> -->
+  <!-- <div id="profile">
+    <p>USER INFORMATION</p>
+    <div id="userInfo">
+      <input #usernn type="text" [value]="userN" (blur)="USERNAME=usernn.value" />
+      <input #userpp type="text" [value]="userP" (blur)="PHO=userpp.value" />
+      <input #userem type="text" [value]="userE" (blur)="EML=userem.value" />
+    </div>
+  </div>
 
-<div id="setchange">
-  <p id="changename">{{USERNAME}}</p>
-  <p id="changepho">{{PHO}}</p>
-  <p id="changeeml">{{EML}}</p>
-</div>
-<button (click)="editInformation()" >EDIT YOUR PROFILE</button>
+  <div id="setchange">
+    <p id="changename">{{USERNAME}}</p>
+    <p id="changepho">{{PHO}}</p>
+    <p id="changeeml">{{EML}}</p>
+  </div>
+  <button (click)="editInformation()">EDIT YOUR PROFILE</button> -->
 </body>
+
 </html>

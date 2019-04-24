@@ -14,9 +14,9 @@
   <div *ngIf="selectedItem" class="itemDetail">
     <h2>{{selectedItem.ItemName | uppercase}} DETAILS</h2>
     <div><span>ItemName: </span>{{selectedItem.ItemName}}</div>
-    <div><span>Price: </span>{{selectedItem.Price}}</div>
+    <div><span>Price: $</span>{{selectedItem.Price}}</div>
     <div><span>Ingredient: </span>{{selectedItem.Ingredient}}</div>
-    <button (click)="saveInLocal(selectedItem.ItemName,selectedItem.Price,selectedItem.ItemName)">ADD TO CART ></button>
+    <button (click)="saveInLocal(selectedItem.ItemName,selectedItem.Price,selectedItem)">ADD TO CART ></button>
   </div>
 </div>
 
@@ -24,7 +24,8 @@
 <div class="cart">
   <div class="cart_title">CART:</div>
   <ul>
-    <li *ngFor="let addeditem of cart">{{addeditem}}</li>
+    <li *ngFor="let addeditem of cart">{{addeditem.ItemName}} <br/> 
+      Price: ${{addeditem.Price}}</li>
   </ul>
 </div>
 

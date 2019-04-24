@@ -1,0 +1,15 @@
+<div id="profile">
+  <p>USER INFORMATION</p>
+  <div id="userInfo">
+    <input #usernn type="text" [value]="userN" (blur)="USERNAME=usernn.value" />
+    <input #userpp type="text" [value]="userP" (blur)="PHO=userpp.value" />
+    <input #userem type="text" [value]="userE" (blur)="EML=userem.value" />
+  </div>
+</div>
+
+<div id="setchange">
+  <p id="changename">{{USERNAME}}</p>
+  <p id="changepho">{{PHO}}</p>
+  <p id="changeeml">{{EML}}</p>
+</div>
+<button (click)="editInformation()">EDIT YOUR PROFILE</button>
