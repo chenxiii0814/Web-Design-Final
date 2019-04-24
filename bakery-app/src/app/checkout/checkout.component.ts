@@ -33,6 +33,8 @@ export class CheckoutComponent implements OnInit {
     let newname = document.getElementById("loggedUser").innerText;
     if(username==""&& newname==""){
       alert("you should login first!");
+    }else if(this.item==undefined){
+    alert("Please add an item!");
     }else{
       this.order.OrderID = this.orderID;
       this.order.User = this.user;
