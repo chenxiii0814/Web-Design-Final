@@ -41,13 +41,12 @@ export class UserHomeComponent implements OnInit {
   }
 
   //the user can change name,email and phone
+  //is used in edit part
   editInformation() {
     let name = document.getElementById("changename").innerText;
     let phone = document.getElementById("changepho").innerText;
     let email = document.getElementById("changeeml").innerText;
     this.newUser = JSON.parse(sessionStorage.user);
-    // this.http.delete('http://localhost:3000/users/')
-    //   .subscribe(data => { console.log("delete!",data);sessionStorage.user=data},);
     this.newUser.UserName = name;
     this.newUser.Email_address = email;
     this.newUser.Phone_number = phone;
@@ -83,7 +82,7 @@ export class UserHomeComponent implements OnInit {
         let orderP = orderU["Password"];
         let orderName = orderU["UserName"];
         let orderItems = order["Item"];
-        // console.log(orderName);
+
         if (orderP == userNow) {
           orderShow += '<div class="orderId111">OrderID :' + order["OrderID"] + '<p class="ord">ITEM:' + orderItems["ItemName"] + '</p>';
         }
@@ -99,7 +98,7 @@ export class UserHomeComponent implements OnInit {
     }
 
   }
-
+//set delay than main thread
   async wait() {
     await delay(1000);
     this.isShown1 = !this.isShown1;
