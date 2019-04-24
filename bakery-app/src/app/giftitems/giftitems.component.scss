@@ -22,6 +22,8 @@
   font-style:$font-style;
   font-size:20px;
 }
+
+//use mixin for link parts
 a:link{
   @include style-a;
 }
