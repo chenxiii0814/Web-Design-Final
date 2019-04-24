@@ -21,3 +21,21 @@ body{
 body h3{
   font-size: 20px;
 }
+#setchange{
+  display: none;
+}
+
+#profile>input{
+  border: 1px solid #000;
+  position: absolute;
+  left:80%;
+
+  margin-left:10px;
+}
+button{
+  border:1px solid #000;
+  font-size: 15px;
+  padding: 5px;
+  margin:3px;
+  border-radius:2px;
+}
