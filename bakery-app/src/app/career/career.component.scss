@@ -7,13 +7,14 @@
     text-align: $text-align;
 }
 
+//float left 
 .left{
     float: $div-position-left;
     width:55%;
     margin-left: 2%;
     margin-top:15px;
 }
-
+//float right
 .right{
     float:$div-position-right;
     width:38%;
