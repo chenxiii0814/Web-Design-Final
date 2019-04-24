@@ -17,7 +17,7 @@
   margin: 5px;
 }
 
-
+//use mixin for different background pics
 #news1{
   @include news_pic(url("news1.png"))
 }

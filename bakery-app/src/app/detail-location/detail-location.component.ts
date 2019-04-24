@@ -6,6 +6,7 @@ import {delay} from "rxjs/operators";
   selector: 'app-detail-location',
   templateUrl: './detail-location.component.html',
   styleUrls: ['./detail-location.component.scss'],
+  //set animation trigger and state
   animations:[
     trigger('imgMove',[
       state('prev',style({'z-index':'3'})),
@@ -35,6 +36,7 @@ export class DetailLocationComponent implements OnInit {
   }
 
   //function to read boolean and set when to begin the animations
+  //use asyc load and delay function
   async wait(){
     await delay(1000);
     this.isShown1=!this.isShown1;

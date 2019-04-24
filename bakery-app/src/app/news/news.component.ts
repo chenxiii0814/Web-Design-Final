@@ -13,6 +13,7 @@ import {forEach} from "@angular/router/src/utils/collection";
   // ]
 })
 export class NewsComponent implements OnInit {
+  //trigger for click function
   show = {
     'news1': false,
     'news2': false,
@@ -20,6 +21,7 @@ export class NewsComponent implements OnInit {
     'news4': false,
   }
   height;
+  //array contains the id name and news
   ps = ['news1', 'news2', 'news3', 'news4'];
   quotes = {
     'news1': 'OVER THE COURSE OF JUST A DECADE, MAX HOMEMADE BAKERY & CAFÉ HAS GROWN FROM A HOME KITCHEN OPERATION INTO A FAVORITE PURVEYOR OF PÂTISSERIE IN BOSTON',
@@ -31,7 +33,9 @@ export class NewsComponent implements OnInit {
 
   constructor(private el:ElementRef, private renderer2:Renderer2) { }
 
+// delete img height
 // show news while click the dt element
+// related name with imgs and news containers
   onclick1(elemId){
     this.show[elemId]=!this.show[elemId];
     console.log(elemId, this.show[elemId]);

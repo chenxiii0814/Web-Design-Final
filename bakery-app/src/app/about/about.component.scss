@@ -1,5 +1,7 @@
 @import "./../../scss/mixin";
 @import "./../../scss/variable";
+
+//use mixin for view pages' grid on left part
 .aboutUs {
   float:$div-position-left;
     @include style-for-grid;
@@ -18,7 +20,7 @@
     line-height:30px;
     width:400px;
   }
-
+//the style of pic
   #about_pic1{
     background-image: url("our-story.jpg");
     width: 520px;

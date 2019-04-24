@@ -49,7 +49,7 @@ display:inline-block;
  .agreement{
     @include display-payment-div
  }
-
+//the button' style is different from page to page so it is hard to use mixin
  #checkOutButton{
     border:solid 0.5px grey;
     border-radius: 5px;
