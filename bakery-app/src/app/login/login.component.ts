@@ -77,6 +77,7 @@ export class LoginComponent implements OnInit {
                       console.log(sessionStorage.user);
                       console.log("session:" + JSON.parse(sessionStorage.user)['UserName']);
                     }
+                    //edit the loop to judge the login station
                     if (document.getElementById("loginController").style.display = 'none') {
                       document.getElementById("CurrentLogOut").style.display = 'block';
                     }
