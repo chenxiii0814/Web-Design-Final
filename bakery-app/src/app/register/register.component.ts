@@ -2,20 +2,20 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { LoginComponent } from './../login/login.component';
-import { ActivatedRoute, Route, Router} from "@angular/router";
-import {User} from "../user";
+import { ActivatedRoute, Route, Router } from "@angular/router";
+import { User } from "../user";
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
-  providers:[LoginComponent]
+  providers: [LoginComponent]
 })
 export class RegisterComponent implements OnInit {
   registeredUser: User;
   userlist;
 
-  constructor(private httpClient: HttpClient, private comp:LoginComponent, private router:Router) { }
+  constructor(private httpClient: HttpClient, private comp: LoginComponent, private router: Router) { }
 
   ngOnInit() {
     // this.comp.getProfile();
@@ -50,17 +50,16 @@ export class RegisterComponent implements OnInit {
       this.router.navigateByUrl("");
       document.getElementById("loginController").style.display = 'none';
       document.getElementById("loggedUser").innerHTML = username;
-      this.httpClient.get("http://localhost:3000/users").subscribe((response)=>{
-          this.userlist=response;
+      this.httpClient.get("http://localhost:3000/users").subscribe((response) => {
+        this.userlist = response;
         for (let i = 0; i < this.userlist.length; i++) {
           if (this.userlist[i].UserName == username) {
             console.log(this.userlist[i]);
-            var str = JSON.stringify(this.userlist[i]);
-
+            // var str = JSON.stringify(this.userlist[i]);
           }
         }
         //set the user to session
-        sessionStorage.user=str;
+        // sessionStorage.user=str;
       });
     } else {
       alert(errorInfo);
@@ -69,7 +68,7 @@ export class RegisterComponent implements OnInit {
   }
 
 
-  postProfile(){
+  postProfile() {
     //send the new user's information to database by set
     let username = (<HTMLInputElement>document.getElementById("username")).value;
     let password = (<HTMLInputElement>document.getElementById("password")).value;
@@ -89,5 +88,14 @@ export class RegisterComponent implements OnInit {
           this.registeredUser = data;
         }
       );
+
+      var str = JSON.stringify({
+        'UserName': username,
+        'Password': password,
+        'Phone_number': phone,
+        'Email_address': email
+      });
+      //set the user to session
+      sessionStorage.user=str;
   }
 }
