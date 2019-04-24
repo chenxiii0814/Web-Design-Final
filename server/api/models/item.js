@@ -6,25 +6,20 @@ const Schema = mongoose.Schema;
  * Mongoose schema for item object.
  */
 let ItemSchema = new Schema({
-    /**
-     * name of item
-     */
+    
+    //item name
     ItemName: {
         type: String,
         required: "Item name is required"
     },
 
-    /**
-     * price of item
-     */
+    //item price
     Price:{
         type: Number,
         required: "Price is required"
     },
 
-    /**
-     * ingrediants of the item
-     */
+    //item ingredient
     Ingredient: {
         type: String,
         required: "Ingredient is required"
