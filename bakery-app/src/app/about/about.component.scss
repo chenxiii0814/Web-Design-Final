@@ -1,10 +1,9 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
 .aboutUs {
-    float:left;
-    grid-column: 1 / 2;
+  float:$div-position-left;
+    @include style-for-grid;
     grid-row: 1;
-    text-decoration: none;
-    color:black;
-    text-align:left;
   }
 
   .aboutUs h1{
@@ -25,6 +24,6 @@
     width: 520px;
     margin-top:65px;
     height: 400px;
-    float:right;
+    float:$div-position-right;
     margin-right:190px
 }

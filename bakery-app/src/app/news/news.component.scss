@@ -1,12 +1,6 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
 
-@mixin news_pic($pic){
-  background-repeat: no-repeat;
-  padding:2px;
-  text-align: center;
-  margin: 20px;
-  height: 200px;
-  background-image: $pic;
-}
 .g-news{
   text-align: center;
   display: grid;
@@ -54,7 +48,7 @@
 
 dt+p{
   height: 130px;
-  text-align: left;
+  text-align: $text-align;
   margin:2px;
   padding: 5px;
   width:200px;
@@ -67,7 +61,7 @@ button{
   padding-top: 5px;
   font-size: smaller;
   border:1px solid transparent;
-  position: absolute;
+  position: $div-position;
   left: 0;
   bottom:0;
 }

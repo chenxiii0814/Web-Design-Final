@@ -1,18 +1,18 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
+
 .back{
-    cursor: pointer;
+    cursor: $cursor;
     margin-top:20px;
-    float:left;
+    float:$div-position-left;
     margin-left:220px;
-    font-style:italic;
+    font-style:$font-style;
     font-size:20px;
   }
 
  .comingSoon{
-    grid-column: 1 / 2;
-    grid-row: 1;
-    text-decoration: none;
-    color:black;
-    text-align:left;
+  grid-row: 1;
+  @include style-for-grid;
  }
  
  p{
@@ -28,7 +28,7 @@
     background-image: url("store_pic2.jpg");
     width: 400px;
     height: 600px;
-    float:right;
+    float:$div-position-right;
     margin-top:-150px;
     margin-right:220px;
 }

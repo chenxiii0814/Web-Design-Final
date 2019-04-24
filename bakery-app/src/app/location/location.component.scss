@@ -1,3 +1,6 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
+
 * {box-sizing: border-box;}
 .wrapper {
   max-width: 69%;
@@ -18,15 +21,12 @@
 }
 
 .locOfBakery {
-  grid-column: 1 / 2;
-  grid-row: 1;
-  text-decoration: none;
-  color:black;
+  @include style-for-location;
 }
 
 p{
   font-size:13px;
-  font-style:italic;
+  font-style:$font-style;
 }
 
 h1{
@@ -36,27 +36,21 @@ h1{
 }
 
 .bakeryloc{
-  width:300px;
-  height:100px;
   margin-left:150px;
   margin-top:10px;
+  @include height-width-div;
 }
 
 .bakeryloc2{
-  width:300px;
-  height:100px;
+  @include height-width-div;
   margin-left:300px;
   margin-top:15px;
 }
 
 .locOfBakery2 {
-  grid-column: 1 / 2;
-  grid-row: 1;
-  text-decoration: none;
-  color:black;
+  @include style-for-location;
 }
 
 .bakeryloc{
-  width:300px;
-  height:100px;
+  @include height-width-div;
 }

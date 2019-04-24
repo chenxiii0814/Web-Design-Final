@@ -1,10 +1,13 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
+
 #card1{
     background-image: url("card1.jpg");
     width: 450px;
     height: 300px;
     margin-top:80px;
     margin-right: 15%;
-    float: right;
+    float: $div-position-right;
 }
 #card2{
     background-image: url("card2.jpg");
@@ -18,23 +21,20 @@
 .back{
   cursor: pointer;
   margin-top:20px;
-  float:left;
+  float:$div-position-left;
   margin-left:220px;
-  font-style:italic;
+  font-style:$font-style;
   font-size:20px;
 }
 a:link{
-  color: black;
-  text-decoration: none;
+  @include style-a;
 }
 
 a:visited{
-  color: #000;
-  text-decoration: none;
+  @include style-a;
 }
 a:hover{
-  color: #121212;
-  text-decoration: none;
+  @include style-a;
 }
 // #card1_details{
 //     margin-left:350px;

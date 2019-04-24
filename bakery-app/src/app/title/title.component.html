@@ -1,8 +1,10 @@
 <body>
+  <!--main page of the bakery website, with 8 sections, signin(log out), signup and checkout-->
   <div class="header">
     <a href="#"> MaxHomeMade </a>
     <p>BAKERY & CAFE</p>
   </div>
+  <!--by click signin and signup, user can go to related pages-->
   <div class="login" id="loginController">
     <a routerLink="/signin">SIGN IN</a> /
     <a routerLink="/signup">SIGN UP</a>
@@ -11,11 +13,13 @@
   </div>
   <div id="logged"></div><br>
 
+  <!--by click the checkout, user can go to checkout page-->
   <div class="checkOut" id="checkOutController">
     <a routerLink="/checkOut">CHECKOUT</a>
   </div>
   <div id="CurrentLogOut"class="logOut" (click)= "logout()"><a>LOG OUT</a></div>
 
+  <!--by click the different section, user can go to related pages-->
   <nav class="banner">
     <a routerLink="/about"><label>ABOUT</label></a>
     <a routerLink="/location"><label>LOCATIONS</label></a>
