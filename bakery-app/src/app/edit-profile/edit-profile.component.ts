@@ -12,7 +12,7 @@ export class EditProfileComponent implements OnInit {
 
   username: String;
   private orderList;
-
+//read user' info from session
   user = JSON.parse(sessionStorage.user);
   public userN = this.user["UserName"];
   private userP = this.user["Phone_number"];
@@ -32,6 +32,7 @@ export class EditProfileComponent implements OnInit {
   
   //the user can change name,email and phone
   editInformation() {
+    //get the edited user information
     let name = document.getElementById("changename").innerText;
     let phone = document.getElementById("changepho").innerText;
     let email = document.getElementById("changeeml").innerText;
@@ -43,6 +44,7 @@ export class EditProfileComponent implements OnInit {
     this.newUser.Phone_number = phone;
     let password = this.newUser["Password"];
     console.log(this.newUser);
+    //store new user into session and database
     sessionStorage.user = JSON.stringify(this.newUser);
     this.http.post('http://localhost:3000/users/',
       {

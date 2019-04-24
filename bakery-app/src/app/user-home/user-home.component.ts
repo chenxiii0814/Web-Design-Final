@@ -26,7 +26,7 @@ export class UserHomeComponent implements OnInit {
   private orderList;
   isShown1 = true;
   isShown2 = true;
-
+//get session's info
   user = JSON.parse(sessionStorage.user);
   public userN = this.user["UserName"];
   private userP = this.user["Phone_number"];
