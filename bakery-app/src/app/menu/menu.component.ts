@@ -10,9 +10,9 @@ import { Component, OnInit } from '@angular/core';
 //all the click are default 'false' in order to hide the list div
 export class MenuComponent implements OnInit {
   clickb = false;
-  clicka=false;
-  clickc=false;
-  clickd=false;
+  clicka = false;
+  clickc = false;
+  clickd = false;
   clicke = false;
   clickf = false;
 
