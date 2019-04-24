@@ -1,6 +1,7 @@
 @import "./../../scss/mixin";
 @import "./../../scss/variable";
 
+//use mixin for pic part
 #card1{
     background-image: url("card1.jpg");
     @include style_img;
