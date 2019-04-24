@@ -1,3 +1,5 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
 
 * {box-sizing: border-box;}
 .wrapper {
@@ -8,13 +10,13 @@
 // When mouse enter into this div, there is some difference to remind customers
 .wrapper:hover{
   border-bottom: #121212;
-  font-style: italic;
+  font-style: $font-style;
 }
 
 .wrapper > div {
   border: 0.9px solid #121212;
   padding: 1em;
-  background-color: lightyellow;
+  background-color: white;
 }
 
 //use grid to layout
@@ -27,28 +29,23 @@
 }
 .one {
   grid-column: 1 / 2;
-  grid-row: 1;
-  cursor: pointer;
+  @include style-div-menu1
 }
 .two { 
   grid-column: 2 / 3;
-  grid-row: 1;
-  cursor: pointer;
+  @include style-div-menu1
 }
 .three {
   grid-column: 3/4;
-  grid-row: 1;
-  cursor: pointer;
+  @include style-div-menu1;
 }
 .four {
   grid-column: 1/2;
-  grid-row: 2;
-  cursor: pointer;
+  @include style-div-menu2
 }
 .five {
   grid-column: 2/3;
-  grid-row: 2;
-  cursor: pointer;
+  @include style-div-menu2
 }
 
 .seven {
@@ -61,15 +58,16 @@
   grid-row: 1;
 }
 .without_underline{
-  text-decoration: none;
-  color: black;
+  text-decoration: $text-decoration;
+  color: $div-text-color;
 }
 
   .itemlist {
     //margin: 0 0 2em 0;
-    position: absolute;
+    position: $div-position
+    ;
     left:16%;
-    list-style-type: none;
+    list-style-type: $text-decoration;
     padding: 0;
     width: 23em;
     border: 1px solid #121212;
@@ -83,7 +81,7 @@
     margin: .5em;
     padding: .3em 0;
     height: 28px;
-    background-color: bisque;
+    background-color: white;
     
   }
 

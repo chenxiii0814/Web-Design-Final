@@ -1,3 +1,6 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
+
 .div-body{
     margin-left: 15.5%;
     margin-right: 15.5%;
@@ -5,7 +8,7 @@
 }
 
 .title-locatioin{
-    float: left;
+    float: $div-position-left;
     padding-top: 10px;
     padding-bottom: 15px;
     margin-left: 20px;
@@ -15,7 +18,7 @@
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 9px;
-    text-align: left;
+    text-align: $text-align;
     line-height:25px;
 }
 
@@ -28,7 +31,7 @@
 }
 
 .left{
-    float: left;
+    float: $div-position-left;
     width:47.5%;
     // background-color: bisque;
     margin-left: 2%;
@@ -36,7 +39,7 @@
 }
 
 .right{
-    float:right;
+    float:$div-position-right;
     width:47.5%;
     // background-color: bisque;
     margin-right: 2%;
@@ -52,10 +55,10 @@
 
 .float-left{
     margin-top:7px;
-    float: left;
+    float: $div-position-left;
 }
 
 .text-left{
-    text-align: left;
+    text-align: $div-position-left;
     line-height:30px;
 }

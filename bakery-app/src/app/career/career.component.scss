@@ -1,12 +1,15 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
+
 .div-body{
     margin-left: 15%;
     margin-right: 15%;
-    text-align: left;
+    text-align: $text-align;
     // background-color: bisque;
 }
 
 .left{
-    float: left;
+    float: $div-position-left;
     width:55%;
     // background-color: bisque;
     margin-left: 2%;
@@ -14,7 +17,7 @@
 }
 
 .right{
-    float:right;
+    float:$div-position-right;
     width:38%;
     // background-color: bisque;
     margin-right: 2%;
@@ -49,7 +52,7 @@ ul{
 li{
     margin-bottom:5px;
     list-style-type: circle;
-    font-style: italic
+    font-style: $font-style;
 }
 
 p{
@@ -58,6 +61,6 @@ p{
 }
 
 .positions{
-    border: 1px solid black;
+    border: 1px solid $div-text-color;
     width: 300px
 }

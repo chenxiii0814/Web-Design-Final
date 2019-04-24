@@ -1,3 +1,6 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
+
 %style_img{
   position: absolute;
   right: 90px;
@@ -6,23 +9,20 @@
   margin-top:100px;
   margin-right:150px;
 }
+r
 
 .back{
-  cursor: pointer;
+  cursor: $cursor;
   margin-top:20px;
-  float:left;
+  float:$div-position-left;
   margin-left:220px;
-  font-style:italic;
+  font-style:$font-style;
   font-size:20px;
 }
 
 .welcome {
-    grid-column: 1 / 2;
-    grid-row: 1;
-    text-decoration: none;
-    color:black;
-    text-align:left;
-    z-index: 5;
+  grid-row: 1;
+  @include style-for-grid;
   }
   
   .welcome p{
@@ -37,11 +37,8 @@
   }
 
   .address{
-    grid-column: 1 / 2;
     grid-row: 2;
-    text-decoration: none;
-    color:black;
-    text-align:left
+    @include style-for-grid;
   }
 
   .address p{
@@ -51,11 +48,8 @@
   }
 
   .time{
-    grid-column: 1 / 2;
     grid-row: 3;
-    text-decoration: none;
-    color:black;
-    text-align:left
+    @include style-for-grid;
   }
 
   .time p{
@@ -65,31 +59,28 @@
   }
 
   .contactInformation{
-    grid-column: 1 / 2;
+    @include style-for-grid;
     grid-row: 4;
-    text-decoration: none;
-    color:black;
-    text-align:left
   }
 
   .contactInformation p{
     font-size:12px;
     margin-left:220px;
     line-height:30px;
-    font-style: italic
+    font-style: $font-style;
   }
 
   #store_pic1{
     background-image: url("bakery_large.png");
-    @extend %style_img;  
+    @include style-for-pic;
 }
 
 #store_pic2{
   background-image: url("location.png");
-  @extend %style_img;  
+  @include style-for-pic;
 }
 
 #store_pic3{
   background-image: url("location2.png");
-  @extend %style_img;  
+  @include style-for-pic;
 }

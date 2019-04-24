@@ -1,3 +1,6 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
+
 %style-img{
   width: 300px;
   height: 300px;
@@ -6,14 +9,14 @@
 }
 
 .list{
-  position: absolute;
+  position: $div-position;
   left: 80px;
   margin-top: 20px;
 
 }
 .list label{
   margin-top: 20px;
-  text-align: left;
+  text-align: $text-align;
   font-size: 18px;
   margin-left:10px;
 
@@ -35,9 +38,9 @@
   }
 
   .itemlist li {
-    cursor: pointer;
+    cursor: $cursor;
     position: relative;
-    text-align: left;
+    text-align: $text-align;
     left: 0;
     margin: .5em;
     padding: .3em 0;
@@ -81,7 +84,7 @@
   .itemDetail{
     font-size:15px;
     line-height:20px;
-    text-align: left;
+    text-align: $text-align;
     margin-left: 20px
   }
 
@@ -93,7 +96,7 @@
     margin-top:10px;
     margin-left:45px;
     font-size:12px;
-    color:black;
+    color:$div-text-color;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: whitesmoke
   }
@@ -101,7 +104,7 @@
   .pic_detail{
     margin-left: 520px;
     margin-top: 80px;
-    float: left;
+    float: $div-position-left;
     width: 300px;
     height: 800px;
     // background-color: #541111
@@ -110,11 +113,11 @@
   .cart{
     margin-right: 160px;
     margin-top: 60px;
-    float: right;
+    float: $div-position-right;
     width: 250px;
     height: 550px;
-    border: black solid 0.8px;
-    text-align: left
+    border: $div-text-color solid 0.8px;
+    text-align: $text-align;
   }
 
   .cart_title{

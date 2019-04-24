@@ -1,5 +1,8 @@
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
+
 p{
-    text-align: left;
+    text-align: $text-align;
     // margin-left: 30%;
     font-size:25px;
 }
@@ -14,7 +17,7 @@ p{
 .input_box{
     margin-top: 45px;
     margin-left: 36%;
-    text-align: left;
+    text-align: $text-align;
 }
 
 .element{
@@ -25,14 +28,14 @@ p{
 
 .title_name{
     width:200px;
-    float: left;
+    float: $div-position-left;
     font-size:18px
     // background-color: aquamarine;
 }
 
 .title-input{
     width:250px;
-    float: left;
+    float: $div-position-left;
 }
 
 .buttonFormat{
@@ -43,9 +46,9 @@ p{
     margin-top:30px;
     margin-left:120px;
     font-size:15px;
-    color:black;
+    color:$div-text-color;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: whitesmoke;
+    background-color: $color-button;
 }
 
 input{
