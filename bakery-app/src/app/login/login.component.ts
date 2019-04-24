@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
-import {Router, RouterModule} from "@angular/router";
+import { Router, RouterModule } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -13,11 +13,11 @@ export class LoginComponent implements OnInit {
   //  userList:User[]=[];
   userList: [User];
   testList: any;
-  public loggedUser:User;
+  public loggedUser: User;
   public user;
 
 
-  constructor(private httpClient: HttpClient, private router:Router) { }
+  constructor(private httpClient: HttpClient, private router: Router) { }
 
   ngOnInit() {
     // this.getProfile();
@@ -25,8 +25,8 @@ export class LoginComponent implements OnInit {
 
   //get the user information and send it to database
   signIn() {
-    if (document.getElementById("loginController").style.display='none') {
-      document.getElementById("CurrentLogOut").style.display='block';      
+    if (document.getElementById("loginController").style.display = 'none') {
+      document.getElementById("CurrentLogOut").style.display = 'block';
     }
     let username = (<HTMLInputElement>document.getElementById("username")).value;
     let password = (<HTMLInputElement>document.getElementById("password")).value;
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     let match: boolean = false;
 
     let errorInfo = "";
-  
+
     this.httpClient.get('http://localhost:3000/users/')
       .subscribe(
         (data: [User]) => {
@@ -64,13 +64,18 @@ export class LoginComponent implements OnInit {
                 this.testList = response;
                 for (let i = 0; i < this.testList.length; i++) {
                   if (this.testList[i].UserName == username) {
-                       console.log(this.testList[i]);
-                       var str = JSON.stringify(this.testList[i]);
+                    console.log(this.testList[i]);
+                    var str = JSON.stringify(this.testList[i]);
                   }
                 }
                 //store the login user to session
-                sessionStorage.user=str;
+                sessionStorage.user = str;
                 console.log(str);
+                if (sessionStorage.user != null) {
+                  console.log(sessionStorage.user);
+                  console.log("session:" + JSON.parse(sessionStorage.user)['UserName']);
+                }
+
               });
 
 
