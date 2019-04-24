@@ -18,6 +18,11 @@ export class OrderHistoryComponent implements OnInit {
     this.getOrder();
   }
 
+  //go back to last page
+  goBack() {
+    history.go(-1);
+  }
+
   //get the order by user's password
   getOrder() {
     let orderShow = "<div class='oderShow'>";
