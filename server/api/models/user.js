@@ -6,33 +6,26 @@ const Schema = mongoose.Schema;
  * Mongoose schema for user object.
  */
 let UserSchema = new Schema({
-    /**
-     * Username of the user
-     */
+   
+    //user name
     UserName: {
         type: String,
         required: "UserName is required"
     },
 
-    /**
-     * Password of the user
-     */
+    //user password
     Password:{
         type: String,
         required: "Password is required"
     },
 
-    /**
-     * Phone_number of the user
-     */
+   //user phone_number
     Phone_number: {
         type: String,
         required: "Phone number is required"
     },
 
-    /**
-     * email address of the user.
-     */
+    //user email_address
     Email_address: {
         type: String,
         required: "Email is required"

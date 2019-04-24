@@ -8,25 +8,20 @@ const Schema = mongoose.Schema;
  * Mongoose schema for order object.
  */
 let OrderSchema = new Schema({
-    /**
-     * id of each order
-     */
+   
+    //order ID
     OrderID: {
         type: String,
         required: "Order ID is required"
     },
 
-    /**
-     * user of the order
-     */
+   //user of the order
     User:{
         type: User,
         required: "User is required"
     },
 
-    /**
-     * item in the order
-     */
+    //item in order
     Item: {
         type: Item,
         required: "Item is required"
