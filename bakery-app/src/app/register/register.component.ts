@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
     if (document.getElementById("loginController").style.display = 'none') {
       document.getElementById("CurrentLogOut").style.display = 'block';
     }
-    
+
     let username = (<HTMLInputElement>document.getElementById("username")).value;
     let password = (<HTMLInputElement>document.getElementById("password")).value;
     let phone = (<HTMLInputElement>document.getElementById("phone")).value;
@@ -51,21 +51,7 @@ export class RegisterComponent implements OnInit {
 
       //check whether loged in
       console.log(this.registeredUser);
-      // this.router.navigateByUrl("");
-      // document.getElementById("loginController").style.display = 'none';
-      // document.getElementById("loggedUser").innerHTML = username;
-
-      // this.httpClient.get("http://localhost:3000/users").subscribe((response) => {
-      //   this.userlist = response;
-      //   for (let i = 0; i < this.userlist.length; i++) {
-      //     if (this.userlist[i].UserName == username) {
-      //       console.log(this.userlist[i]);
-      //       // var str = JSON.stringify(this.userlist[i]);
-      //     }
-      //   }
-      //   //set the user to session
-      //   // sessionStorage.user=str;
-      // });
+      
     } else {
       alert(errorInfo);
       return false;
@@ -100,6 +86,7 @@ export class RegisterComponent implements OnInit {
         'Phone_number': phone,
         'Email_address': email
       });
+      
       //set the user to session
       sessionStorage.user=str;
 
