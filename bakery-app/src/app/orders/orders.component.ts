@@ -28,7 +28,6 @@ export class OrdersComponent implements OnInit {
     'BURGER',
     'CUPCAKE'];
 
-  
   itemList: Item[] = [];
   selectedItem: Item;
   addedItem: Item;
@@ -59,6 +58,7 @@ export class OrdersComponent implements OnInit {
           var str = JSON.stringify(this.addedItem);
           sessionStorage.obj = str;
           console.log(str);
+         
         }
       }
 

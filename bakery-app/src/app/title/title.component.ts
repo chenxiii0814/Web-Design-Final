@@ -17,6 +17,9 @@ export class TitleComponent implements OnInit {
   constructor(private router: Router, private comp: LoginComponent) { }
 
   ngOnInit() {
+    if (sessionStorage.user != null) {
+      console.log(JSON.parse(sessionStorage.user)['UserName']);
+    }
     if (document.getElementById("loginController").style.display = 'block') {
       document.getElementById("CurrentLogOut").style.display = 'none';
     }
