@@ -1,17 +1,17 @@
 <div (click) = "goBack()" class = "back">
-    &lt; Back to locations
+    &lt; Back to profile
 </div>
 
-<div id="profile">
+<div class = "profile" id="profile">
   <p>USER INFORMATION</p>
   <div id="userInfo">
-    <input #usernn type="text" [value]="userN" (blur)="USERNAME=usernn.value" />
-    <input #userpp type="text" [value]="userP" (blur)="PHO=userpp.value" />
-    <input #userem type="text" [value]="userE" (blur)="EML=userem.value" />
+    <input #usernn type="text" [value]="userN" (blur)="USERNAME=usernn.value"/>
+    <input #userpp type="text" [value]="userP" (blur)="PHO=userpp.value"/>
+    <input #userem type="text" [value]="userE" (blur)="EML=userem.value"/>
   </div>
 </div>
 
-<div id="setchange">
+<div class ="setchange" id="setchange">
   <p id="changename">{{USERNAME}}</p>
   <p id="changepho">{{PHO}}</p>
   <p id="changeeml">{{EML}}</p>

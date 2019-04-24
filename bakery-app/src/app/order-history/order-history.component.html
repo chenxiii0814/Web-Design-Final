@@ -1,8 +1,13 @@
 <div (click) = "goBack()" class = "back">
-    &lt; Back to locations
+    &lt; Back to profile
 </div>
 
-<h3>
-  ORDER HISTORY:
-</h3>
+<!--divs for slide pictures-->
+<div id = "history_pic1" [@imgMove]="isShown1 ? 'prev':'on'"></div>
+<div id = "history_pic2" [@imgMove]="isShown2 ? 'next':'on'"></div>
+<div id = "history_pic3" [@imgMove]="isShown3 ? 'last':'on'"></div>
+
+<p>
+  Order History:
+</p>
 <div class="orderList" id="showList">

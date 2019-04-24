@@ -1,38 +1,35 @@
-input {
-  border: 1px solid #121212;
-  border-radius: 1px;
-  font-size: larger;
-  height: 30px;
-  width: 150px;
-  margin-right:830px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  float:right;
-}
+@import "./../../scss/mixin";
+@import "./../../scss/variable";
 
 body{
   text-align: left;
   margin-left: 16%;
   margin-top: 30px;
 }
-body h3{
-  font-size: 20px;
-}
-//use a middle container to show the changed value
-#setchange{
-  display: none;
+
+p{
+  font-size:20px;
+  font-style: $font-style;
 }
 
-#profile>input{
-  border: 1px solid #000;
-  position: absolute;
-  left:80%;
+// when mouse go to the click, color will change
+a{
+  @include style-a;
+  @include style-a-hover;
+}
+a:hover{color: rgba(220,220,220,0.8);}
 
-  margin-left:10px;
+.userProfile{
+  line-height: 30px;
 }
-button{
-  border:1px solid #000;
-  font-size: 15px;
-  padding: 5px;
-  margin:3px;
-  border-radius:2px;
+
+#profile_pic1{
+  background-image: url("profile_pic1.png");
+  @include style-for-pic-profile;
+  }
+
+  #profile_pic2{
+  background-image: url("profile_pic2.png");
+  @include style-for-pic-profile;
 }
+

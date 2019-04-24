@@ -1,44 +1,5 @@
 @import "./../../scss/mixin";
 @import "./../../scss/variable";
-input {
-    border: 1px solid #121212;
-    border-radius: 1px;
-    font-size: larger;
-    height: 30px;
-    width: 150px;
-    margin-right:830px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    float:right;
-  }
-  
-  body{
-    text-align: left;
-    margin-left: 16%;
-    margin-top: 30px;
-  }
-  body h3{
-    font-size: 20px;
-  }
-  //use a middle container to show the changed value
-  #setchange{
-    display: none;
-  }
-  
-  #profile>input{
-    border: 1px solid #000;
-    position: absolute;
-    left:80%;
-  
-    margin-left:10px;
-  }
-  button{
-    border:1px solid #000;
-    font-size: 15px;
-    padding: 5px;
-    margin:3px;
-    border-radius:2px;
-  }
-
   .back{
     cursor: $cursor;
     margin-top:20px;
@@ -47,4 +8,34 @@ input {
     font-style:$font-style;
     font-size:20px;
   }
+
+  .orderList{
+    margin-top:0px;
+    width:600px;
+    margin-left:120px;
+  }
+
+  p{
+    font-size:18px;
+    margin-top:70px;
+    font-style:$font-style;
+    margin-left:120px;
+    width:600px;
+  }
+
+  #history_pic1{
+  background-image: url("history_pic1.png");
+  @include style-for-pic-order;
+  }
+
+  #history_pic2{
+  background-image: url("history_pic2.png");
+  @include style-for-pic-order;
+}
+
+  #history_pic3{
+  background-image: url("history_pic3.png");
+  @include style-for-pic-order;
+}
+
   
