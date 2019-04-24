@@ -1,6 +1,7 @@
 @import "./../../scss/mixin";
 @import "./../../scss/variable";
 
+
 * {box-sizing: border-box;}
 .wrapper {
   max-width: 69%;
@@ -53,4 +54,5 @@ h1{
 
 .bakeryloc{
   @include height-width-div;
+
 }

@@ -44,8 +44,9 @@ export class RegisterComponent implements OnInit {
     if (errorInfo == "") {
       //connect database
       this.postProfile();
+
+      //check whether loged in
       console.log(this.registeredUser);
-      // console.log("username: " + username + "\npassword: " + password + "\nphone: " + phone + "\nemail: " + email);
       this.router.navigateByUrl("");
       document.getElementById("loginController").style.display = 'none';
       document.getElementById("loggedUser").innerHTML = username;
@@ -61,14 +62,10 @@ export class RegisterComponent implements OnInit {
         //set the user to session
         sessionStorage.user=str;
       });
-
-      // alert("Hi "+username+"! Enjoy your cake!");
-
     } else {
       alert(errorInfo);
       return false;
     }
-
   }
 
 

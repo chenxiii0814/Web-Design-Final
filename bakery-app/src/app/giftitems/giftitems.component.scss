@@ -3,21 +3,12 @@
 
 #card1{
     background-image: url("card1.jpg");
-    width: 450px;
-    height: 300px;
-    margin-top:80px;
-    margin-right: 15%;
-    float: $div-position-right;
+    @include style_img
 }
 #card2{
     background-image: url("card2.jpg");
-    width: 450px;
-    height: 300px;
-    margin-top:80px;
-    margin-left: 15%;
-    margin-right:150px
+    @include style_img
 }
-
 .back{
   cursor: pointer;
   margin-top:20px;
@@ -36,7 +27,4 @@ a:visited{
 a:hover{
   @include style-a;
 }
-// #card1_details{
-//     margin-left:350px;
-//     float:left
-// }
+

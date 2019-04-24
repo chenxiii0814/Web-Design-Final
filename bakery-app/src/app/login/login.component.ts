@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     // this.getProfile();
   }
 
-//get the user information and send it to database
+  //get the user information and send it to database
   signIn() {
     if (document.getElementById("loginController").style.display='none') {
       document.getElementById("CurrentLogOut").style.display='block';      
@@ -41,10 +41,9 @@ export class LoginComponent implements OnInit {
           this.userList = data;
           for (let i = 0; i < data.length; i++) {
             console.log(data[i].UserName + " " + data[i].Password);
-            // this.testList.push(data[i]);
-            // console.log("testlist: "+this.testList[i]);
             console.log("userlist: " + this.userList[i].UserName);
 
+            //check whether user name and password matched
             if (username == data[i].UserName && password == data[i].Password) {
               match = true;
               this.loggedUser = data[i];
@@ -53,7 +52,9 @@ export class LoginComponent implements OnInit {
             console.log("out for: " + match);
             //validation for illegal insert
             if (!match) {
-              errorInfo = "Your username or password does not match, please try again!"
+              errorInfo = "Your username or password does not match, please try again!";
+
+              //add the alert style here!!!!
               console.log("match before message is false......")
             } else {
               this.router.navigateByUrl("");
@@ -65,7 +66,6 @@ export class LoginComponent implements OnInit {
                   if (this.testList[i].UserName == username) {
                        console.log(this.testList[i]);
                        var str = JSON.stringify(this.testList[i]);
-
                   }
                 }
                 //store the login user to session
