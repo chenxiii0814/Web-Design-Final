@@ -8,3 +8,35 @@
     font-style:$font-style;
     font-size:20px;
   }
+
+  .profile{
+      margin-top:80px;
+  }
+
+  input{
+      margin-left:10px;
+      width:200px;
+      height:20px;
+      font-size:15px;
+  }
+
+  .setchange{
+    font-size:15px;
+  }
+
+  button{
+        border:solid 0.5px grey;
+        border-radius: 5px;
+        width:180px;
+        height:30px;
+        margin-top:5px;
+        margin-left:0px;
+        font-size:15px;
+        color:$div-text-color;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: $color-button
+  }
+
+  .profile p{
+      font-size:18px;
+  }

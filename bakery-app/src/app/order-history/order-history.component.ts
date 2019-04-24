@@ -2,20 +2,38 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
 import { User } from "../user";
+import { animate, state, style, transition, trigger } from "@angular/animations";
+import { delay } from "rxjs/operators";
 
 @Component({
   selector: 'app-order-history',
   templateUrl: './order-history.component.html',
-  styleUrls: ['./order-history.component.scss']
+  styleUrls: ['./order-history.component.scss'],
+  //set animation trigger and state
+  animations: [
+    trigger('imgMove', [
+      state('prev', style({ 'z-index': '3' })),
+      state('next', style({ 'z-index': '2' })),
+      state('last', style({ 'z-index': '1' })),
+      state('on', style({ 'z-index': '3', 'opacity': '0' })),
+      transition('prev=>on', [animate('2s')]),
+      transition('next=>on', [animate('2s 2s')]),
+      transition('last=>on', [animate('2s 4s')])
+    ])
+  ]
 })
 export class OrderHistoryComponent implements OnInit {
 
   private orderList;
+  isShown1 = true;
+  isShown2 = true;
+  isShown3 = true;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.getOrder();
+    this.wait();
   }
 
   //go back to last page
@@ -38,10 +56,16 @@ export class OrderHistoryComponent implements OnInit {
         let orderItems = order["Item"];
         // console.log(orderName);
         if (orderP == userNow) {
-          orderShow += '<div class="orderId111">OrderID :' + order["OrderID"] + '<p class="ord">ITEM:' + orderItems["ItemName"] + '</p>';
+          orderShow += '<div class="orderId111">OrderID :' + order["OrderID"] + '<p class="ord">ITEM:' + orderItems["ItemName"] +"&nbsp"+"&nbsp"+ order.Item["Price"] +'</p>';
         }
       } document.getElementById("showList").innerHTML = orderShow;
     })
   }
 
+  async wait() {
+    await delay(1000);
+    this.isShown1 = !this.isShown1;
+    this.isShown2 = !this.isShown2;
+    this.isShown3 = !this.isShown3;
+  }
 }

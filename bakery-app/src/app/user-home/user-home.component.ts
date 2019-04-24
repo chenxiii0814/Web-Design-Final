@@ -2,15 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
 import { User } from "../user";
+import { animate, state, style, transition, trigger } from "@angular/animations";
+import { delay } from "rxjs/operators";
 
 @Component({
   selector: 'app-user-home',
   templateUrl: `./user-home.component.html`,
-  styleUrls: [`./user-home.component.scss`]
+  styleUrls: [`./user-home.component.scss`],
+  animations: [
+    trigger('imgMove', [
+      state('prev', style({ 'z-index': '3' })),
+      state('next', style({ 'z-index': '2' })),
+      state('last', style({ 'z-index': '1' })),
+      state('on', style({ 'z-index': '3', 'opacity': '0' })),
+      transition('prev=>on', [animate('2s')]),
+      transition('next=>on', [animate('2s 2s')]),
+      transition('last=>on', [animate('2s 4s')])
+    ])
+  ]
 })
 export class UserHomeComponent implements OnInit {
   username: String;
   private orderList;
+  isShown1 = true;
+  isShown2 = true;
 
   user = JSON.parse(sessionStorage.user);
   public userN = this.user["UserName"];
@@ -22,6 +37,7 @@ export class UserHomeComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe((params) => this.username = params.username);
+    this.wait();
   }
 
   //the user can change name,email and phone
@@ -84,4 +100,9 @@ export class UserHomeComponent implements OnInit {
 
   }
 
+  async wait() {
+    await delay(1000);
+    this.isShown1 = !this.isShown1;
+    this.isShown2 = !this.isShown2;
+  }
 }

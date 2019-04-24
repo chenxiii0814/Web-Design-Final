@@ -75,7 +75,7 @@ export class EditProfileComponent implements OnInit {
         let orderItems = order["Item"];
         // console.log(orderName);
         if (orderP == userNow) {
-          orderShow += '<div class="orderId111">OrderID :' + order["OrderID"] + '<p class="ord">ITEM:' + orderItems["ItemName"] + '</p>';
+          orderShow += '<div class="orderId111">OrderID :' + order["OrderID"] + '<p class="ord">ITEM:' + orderItems["ItemName"] + "&nbsp"+"&nbsp"+ order.Item["Price"] + '</p>';
         }
       } document.getElementById("showList").innerHTML = orderShow;
     })
