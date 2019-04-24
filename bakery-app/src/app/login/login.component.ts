@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     // this.getProfile();
   }
 
-//get the user information and send it to database
+  //get the user information and send it to database
   signIn() {
     if (document.getElementById("loginController").style.display='none') {
       document.getElementById("CurrentLogOut").style.display='block';      

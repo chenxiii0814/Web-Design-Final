@@ -5,9 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 
-
-import { RouterModule } from '@angular/router';//router
-import { MenuComponent } from './menu/menu.component';//menu part
+//for router part
+import { RouterModule } from '@angular/router';
+//for menu part
+import { MenuComponent } from './menu/menu.component';
+//in case for any router error
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SlideComponent } from './slide/slide.component';
 
@@ -69,6 +71,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    
+    //router link
     RouterModule.forRoot([
       {
         path:'',

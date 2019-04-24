@@ -11,7 +11,10 @@ import { SessionStorageService } from "ngx-webstorage";
   styleUrls: ['./orders.component.scss']
 })
 export class OrdersComponent implements OnInit {
-  public imageList = ['COOKIE',
+  
+  //class of show detail part
+  public imageList = [
+    'COOKIE',
     'MILK',
     'SHAKASHUKA',
     'SANDWICH',
@@ -24,6 +27,8 @@ export class OrdersComponent implements OnInit {
     'MACARONS',
     'BURGER',
     'CUPCAKE'];
+
+  
   itemList: Item[] = [];
   selectedItem: Item;
   addedItem: Item;
@@ -35,12 +40,16 @@ export class OrdersComponent implements OnInit {
 
 
   saveInLocal(name, price, cartItem): void {
-    // alert("ssssssssssss")
+    
     this.loggedUser = document.getElementById("loggedUser").innerHTML;
 
+    //check if user is logged in 
+    //user must log in before order
     if (this.loggedUser == "") {
       alert("You need to sign in first!");
     } else {
+
+      //session
       let itemKey = name;
       this.sessionSt.store(name, price);
       console.log("the name is:" + name + 'its price:' + price);
@@ -76,8 +85,6 @@ export class OrdersComponent implements OnInit {
 
   ngOnInit() {
     this.GetProfile();
-    // console.log(this.imageList[1]);
-    // console.log(this.loggedUser);
   }
 
   onSelect(item: Item): void {
