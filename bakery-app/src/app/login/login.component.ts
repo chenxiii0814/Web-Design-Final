@@ -25,9 +25,7 @@ export class LoginComponent implements OnInit {
 
   //get the user information and send it to database
   signIn() {
-    if (document.getElementById("loginController").style.display = 'none') {
-      document.getElementById("CurrentLogOut").style.display = 'block';
-    }
+    
     let username = (<HTMLInputElement>document.getElementById("username")).value;
     let password = (<HTMLInputElement>document.getElementById("password")).value;
 
@@ -47,6 +45,7 @@ export class LoginComponent implements OnInit {
             if (username == data[i].UserName && password == data[i].Password) {
               match = true;
               this.loggedUser = data[i];
+
             }
 
             console.log("out for: " + match);
@@ -54,9 +53,14 @@ export class LoginComponent implements OnInit {
             if (!match) {
               errorInfo = "Your username or password does not match, please try again!";
 
-              //add the alert style here!!!!
-              console.log("match before message is false......")
-            } else {
+              //alert
+              alert(errorInfo);
+              console.log("match before message is false......");
+              console.log(sessionStorage.user);
+              // sessionStorage.user = undefined;
+              return false;
+            }
+            else if (match) {
               this.router.navigateByUrl("");
               document.getElementById("loginController").style.display = 'none';
               document.getElementById("loggedUser").innerHTML = this.loggedUser.UserName.toString();
@@ -66,26 +70,25 @@ export class LoginComponent implements OnInit {
                   if (this.testList[i].UserName == username) {
                     console.log(this.testList[i]);
                     var str = JSON.stringify(this.testList[i]);
+                    //store the login user to session
+                    sessionStorage.user = str;
+                    console.log(str);
+                    if (sessionStorage.user != null) {
+                      console.log(sessionStorage.user);
+                      console.log("session:" + JSON.parse(sessionStorage.user)['UserName']);
+                    }
+                    if (document.getElementById("loginController").style.display = 'none') {
+                      document.getElementById("CurrentLogOut").style.display = 'block';
+                    }
                   }
                 }
-                //store the login user to session
-                sessionStorage.user = str;
-                console.log(str);
-                if (sessionStorage.user != null) {
-                  console.log(sessionStorage.user);
-                  console.log("session:" + JSON.parse(sessionStorage.user)['UserName']);
-                }
+
 
               });
-
-
             }
-            console.log("out for2: " + match);
           }
-
         }
       );
-    console.log("out for3: " + match);
   }
 
 }
