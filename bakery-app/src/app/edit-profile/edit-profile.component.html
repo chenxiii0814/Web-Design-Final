@@ -2,6 +2,7 @@
     &lt; Back to profile
 </div>
 
+<!--bind the data to html-->
 <div class = "profile" id="profile">
   <p>USER INFORMATION</p>
   <div id="userInfo">
@@ -10,7 +11,7 @@
     <input #userem type="text" [value]="userE" (blur)="EML=userem.value"/>
   </div>
 </div>
-
+<!--bind data with ts-->
 <div class ="setchange" id="setchange">
   <p id="changename">{{USERNAME}}</p>
   <p id="changepho">{{PHO}}</p>

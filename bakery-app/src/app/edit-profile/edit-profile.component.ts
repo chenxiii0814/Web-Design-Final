@@ -15,9 +15,9 @@ export class EditProfileComponent implements OnInit {
 //read user' info from session
   user = JSON.parse(sessionStorage.user);
   public userN = this.user["UserName"];
-  private userP = this.user["Phone_number"];
-  private userE = this.user["Email_address"];
-  private newUser: User;
+  public userP = this.user["Phone_number"];
+  public userE = this.user["Email_address"];
+  public newUser: User;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
