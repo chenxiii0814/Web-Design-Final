@@ -3,11 +3,15 @@
 
 #card1{
     background-image: url("card1.jpg");
-    @include style_img
+    @include style_img;
+    float: $div-position-left;
+    margin-left:-100px;
 }
 #card2{
     background-image: url("card2.jpg");
-    @include style_img
+    @include style_img;
+    float: $div-position-right;
+    margin-right:170px
 }
 .back{
   cursor: pointer;

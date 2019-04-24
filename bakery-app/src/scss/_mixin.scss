@@ -101,3 +101,9 @@
     background-image: $pic;
     z-index: $index;
   }
+
+  @mixin style-img{
+      width: 450px;
+      height: 300px;
+      margin-top:80px;
+  }
