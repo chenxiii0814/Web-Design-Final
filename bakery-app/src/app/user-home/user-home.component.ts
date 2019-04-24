@@ -90,6 +90,7 @@ export class UserHomeComponent implements OnInit {
     })
   }
 
+  //get data from mongodb
   getUserProfile() {
     if (document.getElementById("profile").style.display = 'none') {
       document.getElementById("profile").style.display = 'block';;
