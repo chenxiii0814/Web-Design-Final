@@ -25,6 +25,11 @@ export class EditProfileComponent implements OnInit {
     this.route.params.subscribe((params) => this.username = params.username);
   }
 
+  //go back to last page
+  goBack() {
+    history.go(-1);
+  }
+  
   //the user can change name,email and phone
   editInformation() {
     let name = document.getElementById("changename").innerText;
