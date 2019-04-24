@@ -44,7 +44,8 @@ exports.get = function (userId) {
  */
 exports.update = function (user) {
     user.modified_date = new Date();
-    const promise = User.findOneAndUpdate({_id: user._id}, user).exec();
+    user.modified_user = new User();
+    const promise = User.findOneAndUpdate({_id: user._id}, user,{new:true}).exec();
     return promise;
 };
 
