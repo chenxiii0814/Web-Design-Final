@@ -26,7 +26,7 @@ export class CheckoutComponent implements OnInit {
   ngOnInit() {
     this.retrieve();
   }
-
+//get user from session and build an order
   checkOut(){
 
     let username=document.getElementById("logged").innerText;
@@ -44,7 +44,7 @@ export class CheckoutComponent implements OnInit {
       this.router.navigateByUrl('/')
     };
 
-
+//tip thanks
     if(Number((<HTMLInputElement>document.getElementById('tip')).value)>=0){
       console.log("Thanks for your tip");
     }
@@ -52,7 +52,7 @@ export class CheckoutComponent implements OnInit {
       alert("tip cannot be negetive.");
       return false;
     }
-
+//validations for checkout info
     let errorInfo = "";
     if ((<HTMLInputElement>document.getElementById('firstName')).value == "") {
       errorInfo = "First name cannot be null!\n";
@@ -83,7 +83,7 @@ export class CheckoutComponent implements OnInit {
     }
 
   }
-
+//send the order to database
   placeOrder(order:Order){
     this.http.post<Order>('http://localhost:3000/orders', {
       'OrderID': order.OrderID,
@@ -101,7 +101,7 @@ export class CheckoutComponent implements OnInit {
       }
     )
   }
-
+//retrieve the items in session and print them on the front end
   retrieve(){
     this.orderID=Date.parse(new Date().toString());
     document.getElementById("IdNum").innerHTML=this.orderID.toString();
@@ -116,6 +116,8 @@ export class CheckoutComponent implements OnInit {
     document.getElementById("orderUser").innerHTML=this.user["UserName"];
   }
 
+
+//remove the item in cart
   removeItem(){
     document.getElementById("items").style.display = "none";
     document.getElementById("remove").style.display = "none";
