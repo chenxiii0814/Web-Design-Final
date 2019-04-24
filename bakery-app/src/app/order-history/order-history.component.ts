@@ -25,6 +25,7 @@ import { delay } from "rxjs/operators";
 export class OrderHistoryComponent implements OnInit {
 
   private orderList;
+  //set trigger var to call animation
   isShown1 = true;
   isShown2 = true;
   isShown3 = true;
@@ -54,14 +55,14 @@ export class OrderHistoryComponent implements OnInit {
         let orderP = orderU["Password"];
         let orderName = orderU["UserName"];
         let orderItems = order["Item"];
-        // console.log(orderName);
+
         if (orderP == userNow) {
           orderShow += '<div class="orderId111">OrderID :' + order["OrderID"] + '<p class="ord">ITEM:' + orderItems["ItemName"] +"&nbsp"+"&nbsp"+ order.Item["Price"] +'</p>';
         }
       } document.getElementById("showList").innerHTML = orderShow;
     })
   }
-
+  //call the animation async and latter than the main thread for 1000ms
   async wait() {
     await delay(1000);
     this.isShown1 = !this.isShown1;
